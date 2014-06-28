@@ -1,0 +1,2 @@
+# do not let people accidentally install 9999 ebuild
+=media-sound/deadbeef-9999
