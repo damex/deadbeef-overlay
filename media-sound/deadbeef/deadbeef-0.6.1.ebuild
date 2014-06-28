@@ -6,7 +6,7 @@ inherit eutils fdo-mime gnome2-utils
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~*"
+KEYWORDS="*"
 
 DESCRIPTION="foobar2k-like music player"
 HOMEPAGE="http://deadbeef.sourceforge.net/"
