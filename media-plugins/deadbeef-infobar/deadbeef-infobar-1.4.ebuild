@@ -25,22 +25,22 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	if use gtk2 ; then
-	  emake gtk2
+		emake gtk2
 	fi
 
 	if use gtk3 ; then
-	  emake gtk3
+		emake gtk3
 	fi
 }
 
 src_install() {
 	if use gtk2 ; then
-	  insinto /usr/$(get_libdir)/deadbeef
-	  doins gtk2/ddb_infobar_gtk2.so
+		insinto /usr/$(get_libdir)/deadbeef
+		doins gtk2/ddb_infobar_gtk2.so
 	fi
 
 	if use gtk3 ; then
-	  insinto /usr/$(get_libdir)/deadbeef
-	  doins gtk3/ddb_infobar_gtk3.so
+		insinto /usr/$(get_libdir)/deadbeef
+		doins gtk3/ddb_infobar_gtk3.so
 	fi
 }

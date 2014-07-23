@@ -8,8 +8,6 @@ DESCRIPTION="Infobar plugin for DeadBeeF audio player. Shows lyrics and artist's
 HOMEPAGE="https://bitbucket.org/dsimbiriatin/deadbeef-infobar/wiki/Home"
 EHG_REPO_URI="https://bitbucket.org/dsimbiriatin/deadbeef-infobar"
 
-RESTRICT="mirror"
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
@@ -25,22 +23,22 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	if use gtk2 ; then
-	  emake gtk2
+		emake gtk2
 	fi
 
 	if use gtk3 ; then
-	  emake gtk3
+		emake gtk3
 	fi
 }
 
 src_install() {
 	if use gtk2 ; then
-	  insinto /usr/$(get_libdir)/deadbeef
-	  doins gtk2/ddb_infobar_gtk2.so
+		insinto /usr/$(get_libdir)/deadbeef
+		doins gtk2/ddb_infobar_gtk2.so
 	fi
 
 	if use gtk3 ; then
-	  insinto /usr/$(get_libdir)/deadbeef
-	  doins gtk3/ddb_infobar_gtk3.so
+		insinto /usr/$(get_libdir)/deadbeef
+		doins gtk3/ddb_infobar_gtk3.so
 	fi
 }
