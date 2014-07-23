@@ -1,2 +1,3 @@
-# do not let people accidentally install 9999 ebuild
+# do not let people accidentally install live ebuilds
+=media-plugin/deadbeef-infobar-9999
 =media-sound/deadbeef-9999
