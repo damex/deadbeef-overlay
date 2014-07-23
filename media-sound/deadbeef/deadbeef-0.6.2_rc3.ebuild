@@ -127,7 +127,7 @@ src_prepare() {
 
 	if ! use unity ; then
 		# remove unity trash
-		epatch "${FILESDIR}/{PN}-0.6.2-or-higher-remove-unity-trash.patch"
+		epatch "${FILESDIR}/${PN}-0.6.2-or-higher-remove-unity-trash.patch"
 	fi
 }
 
