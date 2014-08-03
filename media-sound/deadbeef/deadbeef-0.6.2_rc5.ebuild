@@ -63,9 +63,9 @@ LICENSE="BSD
 
 SLOT="0"
 
-IUSE="aac adplug alac alsa psf cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg filebrowser flac gme gtk2
-	gtk3 hotkeys infobar lastfm mac m3u midi mms mono2stereo mp3 musepack nls lastfm libnotify libsamplerate nullout
-	oss psf pulseaudio pltbrowser shellexec shellexecui shn sid sndfile tta unity vorbis vtx wavpack wma zip"
+IUSE="aac adplug alac alsa psf cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg filebrowser
+	flac gme gtk2 gtk3 hotkeys infobar lastfm mac m3u midi mms mono2stereo mp3 musepack nls lastfm libnotify libsamplerate
+	nullout oss psf pulseaudio pltbrowser shellexec shellexecui shn sid sndfile tta unity vorbis vtx wavpack wma zip"
 
 REQUIRED_USE="cover-imlib2? ( cover )
 	cover-network? ( cover curl )
