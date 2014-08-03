@@ -185,8 +185,10 @@ src_configure() {
 }
 
 pkg_preinst() {
-	gnome2_icon_savelist
-	gnome2_schemas_savelist
+	if use gtk2 || use gtk3 ; then
+		gnome2_icon_savelist
+		gnome2_schemas_savelist
+	fi
 }
 
 pkg_postinst() {
@@ -194,15 +196,20 @@ pkg_postinst() {
 		einfo "enable manually freepats support for timidity via"
 		einfo "eselect timidity set --global freepats"
 	fi
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-	gnome2_icon_cache_update
-	gnome2_schemas_update
+
+	if use gtk2 || use gtk3 ; then
+		fdo-mime_desktop_database_update
+		fdo-mime_mime_database_update
+		gnome2_icon_cache_update
+		gnome2_schemas_update
+	fi
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-	gnome2_icon_cache_update
-	gnome2_schemas_update
+	if use gtk2 || use gtk3 ; then
+		fdo-mime_desktop_database_update
+		fdo-mime_mime_database_update
+		gnome2_icon_cache_update
+		gnome2_schemas_update
+	fi
 }
