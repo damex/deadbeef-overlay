@@ -22,7 +22,9 @@ RDEPEND="dev-libs/libxml2
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/deadbeef-infobar-load-gtk2-and-gtk3-fix.diff"
+	epatch "${FILESDIR}/${PN}-cflags.diff"
+	epatch "${FILESDIR}/${PN}-load-gtk2-and-gtk3-version-fix.diff"
+	epatch "${FILESDIR}/${PN}-focus-fix.diff"
 }
 
 src_compile() {
