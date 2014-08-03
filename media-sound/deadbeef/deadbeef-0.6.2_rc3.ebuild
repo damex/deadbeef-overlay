@@ -133,7 +133,6 @@ src_prepare() {
 
 src_configure() {
 	econf --disable-coreaudio \
-		--disable-dependency-tracking \
 		--disable-portable \
 		--disable-static \
 		--docdir=/usr/share/${PN} \

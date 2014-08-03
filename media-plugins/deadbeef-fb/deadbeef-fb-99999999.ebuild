@@ -25,8 +25,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/deadbeef-devel"
 
 src_configure() {
-	econf --disable-dependency-tracking \
-		--disable-staticlink \
+	econf --disable-staticlink \
 		$(use_enable gtk2) \
 		$(use_enable gtk3)
 }
