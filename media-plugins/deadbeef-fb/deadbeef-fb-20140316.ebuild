@@ -23,8 +23,16 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/deadbeef-devel"
 
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-avoid-version.patch"
+
+	if use gtk3 ; then
+		epatch "${FILESDIR}/${PN}-stop-treating-warnings-as-errors.patch"
+	fi
+}
+
 src_configure() {
-	econf --disable-staticlink \
+	econf --disable-static \
 		$(use_enable gtk2) \
 		$(use_enable gtk3)
 }
@@ -37,7 +45,7 @@ src_install() {
 	fi
 
 	if use gtk3 ; then
-		insinto /usr/$(get_libdir)/
+		insinto /usr/$(get_libdir)/deadbeef
 		doins .libs/ddb_misc_filebrowser_GTK3.so \
 			.libs/ddb_misc_filebrowser_GTK3.so.0.0.0
 	fi
