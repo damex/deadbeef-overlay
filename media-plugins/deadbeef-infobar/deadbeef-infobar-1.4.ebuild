@@ -23,6 +23,10 @@ RDEPEND="dev-libs/libxml2
 
 DEPEND="${RDEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}/deadbeef-infobar-load-gtk2-and-gtk3-fix.diff"
+}
+
 src_compile() {
 	if use gtk2 ; then
 		emake gtk2
