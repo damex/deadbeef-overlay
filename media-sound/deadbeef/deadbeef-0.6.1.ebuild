@@ -11,7 +11,7 @@ KEYWORDS="*"
 DESCRIPTION="foobar2k-like music player"
 HOMEPAGE="http://deadbeef.sourceforge.net/"
 
--RESTRICT="mirror"
+RESTRICT="mirror"
 
 LICENSE="BSD
 	UNICODE
