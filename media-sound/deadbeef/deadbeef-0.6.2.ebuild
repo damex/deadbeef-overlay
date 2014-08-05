@@ -197,7 +197,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	if use midi ; then
-		einfo "enable manually freepats support for timidity via"
+		einfo "enable the freepats support for wildmidi manually, using the following command:"
 		einfo "eselect timidity set --global freepats"
 	fi
 
