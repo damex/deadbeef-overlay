@@ -41,12 +41,12 @@ src_compile() {
 
 src_install() {
 	if use gtk2 ; then
-		insinto /usr/$(get_libdir)/deadbeef
-		doins gtk2/ddb_infobar_gtk2.so
+		insinto "/usr/$(get_libdir)/deadbeef"
+		doins gtk2/ddb_infobar_gtk2.so || die
 	fi
 
 	if use gtk3 ; then
-		insinto /usr/$(get_libdir)/deadbeef
-		doins gtk3/ddb_infobar_gtk3.so
+		insinto "/usr/$(get_libdir)/deadbeef"
+		doins gtk3/ddb_infobar_gtk3.so || die
 	fi
 }
