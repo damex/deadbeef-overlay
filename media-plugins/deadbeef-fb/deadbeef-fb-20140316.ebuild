@@ -40,13 +40,13 @@ src_configure() {
 src_install() {
 	if use gtk2 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins .libs/ddb_misc_filebrowser_GTK2.so \
-			.libs/ddb_misc_filebrowser_GTK2.so.0.0.0 || die
+		doins "${S}/.libs/ddb_misc_filebrowser_GTK2.so" \
+			"${S}/.libs/ddb_misc_filebrowser_GTK2.so.0.0.0" || die
 	fi
 
 	if use gtk3 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins .libs/ddb_misc_filebrowser_GTK3.so \
-			.libs/ddb_misc_filebrowser_GTK3.so.0.0.0 || die
+		doins "${S}/.libs/ddb_misc_filebrowser_GTK3.so" \
+			"${S}/.libs/ddb_misc_filebrowser_GTK3.so.0.0.0" || die
 	fi
 }
