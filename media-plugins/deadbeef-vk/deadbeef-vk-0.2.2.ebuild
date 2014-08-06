@@ -38,11 +38,11 @@ src_configure() {
 src_install() {
 	if use gtk2 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins "${WORKDIR}/${P}_build/vkontakte_gtk2.so"
+		doins "${WORKDIR}/${P}_build/vkontakte_gtk2.so" || die
 	fi
 
 	if use gtk3 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins "${WORKDIR}/${P}_build/vkontakte_gtk3.so"
+		doins "${WORKDIR}/${P}_build/vkontakte_gtk3.so" || die
 	fi
 }
