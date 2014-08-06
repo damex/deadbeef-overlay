@@ -64,7 +64,7 @@ SLOT="0"
 IUSE="+alsa +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis +flac
 	aac adplug alac psf cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg
 	filebrowser gme gtk3 infobar lastfm mac midi mms mono2stereo musepack nls lastfm libnotify libsamplerate
-	nullout oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vtx wavpack wma zip"
+	nullout oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vk vtx wavpack wma zip"
 
 REQUIRED_USE="cover-imlib2? ( cover )
 	cover-network? ( cover curl )
@@ -83,7 +83,8 @@ for lang in ${LANGS} ; do
 done
 
 PDEPEND="filebrowser? ( media-plugins/deadbeef-fb )
-	infobar? ( media-plugins/deadbeef-infobar )"
+	infobar? ( media-plugins/deadbeef-infobar )
+	vk? ( media-plugins/deadbeef-vk )"
 
 RDEPEND="aac? ( media-libs/faad2 )
 	adplug? ( media-libs/adplug )
