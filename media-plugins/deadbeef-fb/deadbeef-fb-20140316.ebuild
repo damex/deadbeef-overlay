@@ -2,7 +2,7 @@
 
 EAPI="5"
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="DeaDBeeF filebrowser plugin"
 HOMEPAGE="http://sourceforge.net/projects/deadbeef-fb/"
@@ -29,6 +29,8 @@ src_prepare() {
 	if use gtk3 ; then
 		epatch "${FILESDIR}/${PN}-stop-treating-warnings-as-errors.patch"
 	fi
+
+	eautoreconf
 }
 
 src_configure() {
@@ -40,13 +42,11 @@ src_configure() {
 src_install() {
 	if use gtk2 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins "${S}/.libs/ddb_misc_filebrowser_GTK2.so" \
-			"${S}/.libs/ddb_misc_filebrowser_GTK2.so.0.0.0" || die
+		doins "${S}/.libs/ddb_misc_filebrowser_GTK2.so" || die
 	fi
 
 	if use gtk3 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins "${S}/.libs/ddb_misc_filebrowser_GTK3.so" \
-			"${S}/.libs/ddb_misc_filebrowser_GTK3.so.0.0.0" || die
+		doins "${S}/.libs/ddb_misc_filebrowser_GTK3.so" || die
 	fi
 }

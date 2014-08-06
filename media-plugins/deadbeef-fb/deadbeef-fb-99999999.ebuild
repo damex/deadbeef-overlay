@@ -2,11 +2,10 @@
 
 EAPI="5"
 
-inherit eutils git-2
+inherit autotools eutils git-2
 
 EGIT_REPO_URI="git://git.code.sf.net/p/deadbeef-fb/code"
 EGIT_BRANCH="master"
-EGIT_BOOTSTRAP="autogen.sh"
 
 DESCRIPTION="DeaDBeeF filebrowser plugin"
 HOMEPAGE="http://sourceforge.net/projects/deadbeef-fb/"
@@ -30,6 +29,8 @@ src_prepare() {
 	if use gtk3 ; then
 		epatch "${FILESDIR}/${PN}-stop-treating-warnings-as-errors.patch"
 	fi
+
+	eautoreconf
 }
 
 src_configure() {
@@ -41,13 +42,11 @@ src_configure() {
 src_install() {
 	if use gtk2 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins .libs/ddb_misc_filebrowser_GTK2.so \
-			.libs/ddb_misc_filebrowser_GTK2.so.0.0.0 || die
+		doins "${S}/.libs/ddb_misc_filebrowser_GTK2.so" || die
 	fi
 
 	if use gtk3 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins .libs/ddb_misc_filebrowser_GTK3.so \
-			.libs/ddb_misc_filebrowser_GTK3.so.0.0.0 || die
+		doins "${S}/.libs/ddb_misc_filebrowser_GTK3.so" || die
 	fi
 }
