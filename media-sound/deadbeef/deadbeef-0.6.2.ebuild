@@ -62,7 +62,7 @@ LICENSE="BSD
 SLOT="0"
 
 IUSE="+alsa +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis +flac
-	aac adplug alac psf cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg
+	aac adplug alac bs2b cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg
 	filebrowser gme gtk3 infobar lastfm mac midi mms mono2stereo musepack nls lastfm libnotify libsamplerate
 	musical-spectrum nullout oss psf pulseaudio pltbrowser shellexec shellexecui shn sid spectrogram tta unity vk vtx wavpack wma zip"
 
@@ -82,7 +82,8 @@ for lang in ${LANGS} ; do
 	IUSE+=" linguas_${lang}"
 done
 
-PDEPEND="filebrowser? ( media-plugins/deadbeef-fb )
+PDEPEND="bs2b? ( media-plugins/deadbeef-bs2b )
+	filebrowser? ( media-plugins/deadbeef-fb )
 	infobar? ( media-plugins/deadbeef-infobar )
 	musical-spectrum? ( media-plugins/deadbeef-musical-spectrum )
 	spectrogram? ( media-plugins/deadbeef-spectrogram )
