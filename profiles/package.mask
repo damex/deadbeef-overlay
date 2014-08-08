@@ -1,5 +1,6 @@
 # do not let people accidentally install live ebuilds
 =media-plugins/deadbeef-fb-99999999
 =media-plugins/deadbeef-infobar-9999
+=media-plugins/deadbeef-musical-spectrum-9999
 =media-plugins/deadbeef-vk-9999
 =media-sound/deadbeef-9999
