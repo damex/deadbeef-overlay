@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="media-sound/deadbeef
-	media-libs/libbs2b"
+RDEPEND="media-libs/libbs2b
+	media-sound/deadbeef"
 
 DEPEND="${RDEPEND}"
 
