@@ -64,7 +64,7 @@ SLOT="0"
 IUSE="+alsa +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis +flac
 	aac adplug alac bs2b cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg
 	filebrowser gme gtk3 infobar lastfm mac midi mms mono2stereo musepack nls lastfm libnotify libsamplerate
-	musical-spectrum nullout oss psf pulseaudio pltbrowser shellexec shellexecui shn sid spectrogram tta unity vk vtx wavpack wma zip"
+	musical-spectrum nullout oss psf pulseaudio pltbrowser shellexec shellexecui shn sid spectrogram stereo-widener tta unity vk vtx wavpack wma zip"
 
 REQUIRED_USE="cover-imlib2? ( cover )
 	cover-network? ( cover curl )
@@ -87,6 +87,7 @@ PDEPEND="bs2b? ( media-plugins/deadbeef-bs2b )
 	infobar? ( media-plugins/deadbeef-infobar )
 	musical-spectrum? ( media-plugins/deadbeef-musical-spectrum )
 	spectrogram? ( media-plugins/deadbeef-spectrogram )
+	stereo-widener? ( media-plugins/deadbeef-stereo-widener )
 	vk? ( media-plugins/deadbeef-vk )"
 
 RDEPEND="aac? ( media-libs/faad2 )

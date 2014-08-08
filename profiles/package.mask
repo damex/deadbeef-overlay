@@ -4,5 +4,6 @@
 =media-plugins/deadbeef-infobar-9999
 =media-plugins/deadbeef-musical-spectrum-9999
 =media-plugins/deadbeef-spectrogram-9999
+=media-plugins/deadbeef-stereo-widener-9999
 =media-plugins/deadbeef-vk-9999
 =media-sound/deadbeef-9999
