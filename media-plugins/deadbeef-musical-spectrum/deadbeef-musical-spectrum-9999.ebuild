@@ -2,7 +2,7 @@
 
 EAPI="5"
 
-inherit git-2
+inherit eutils git-2
 
 DESCRIPTION="Musical Spectrum plugin for DeaDBeeF audio player"
 HOMEPAGE="https://github.com/cboxdoerfer/ddb_musical_spectrum"
@@ -19,6 +19,10 @@ RDEPEND="sci-libs/fftw:3.0
 	gtk3? ( media-sound/deadbeef[gtk3] )"
 
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-cflags.patch"
+}
 
 src_compile() {
 	if use gtk2 ; then
