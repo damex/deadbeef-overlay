@@ -11,8 +11,8 @@ EHG_REPO_URI="https://bitbucket.org/dsimbiriatin/deadbeef-infobar"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="gtk2 gtk3"
-REQUIRED_USE="|| ( ${IUSE} )"
+IUSE="+gtk2 gtk3"
+REQUIRED_USE="|| ( gtk2 gtk3 )"
 
 RDEPEND="dev-libs/libxml2
 	media-sound/deadbeef[curl]
@@ -40,11 +40,11 @@ src_compile() {
 src_install() {
 	if use gtk2 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins gtk2/ddb_infobar_gtk2.so || die
+		doins "${S}/gtk2/ddb_infobar_gtk2.so" || die
 	fi
 
 	if use gtk3 ; then
 		insinto "/usr/$(get_libdir)/deadbeef"
-		doins gtk3/ddb_infobar_gtk3.so || die
+		doins "${S}/gtk3/ddb_infobar_gtk3.so" || die
 	fi
 }

@@ -13,8 +13,8 @@ HOMEPAGE="http://sourceforge.net/projects/deadbeef-fb/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="gtk2 gtk3"
-REQUIRED_USE="|| ( ${IUSE} )"
+IUSE="+gtk2 gtk3"
+REQUIRED_USE="|| ( gtk2 gtk3 )"
 
 RDEPEND="gtk2? ( media-sound/deadbeef[gtk2] )
 	gtk3? ( media-sound/deadbeef[gtk3] )"
