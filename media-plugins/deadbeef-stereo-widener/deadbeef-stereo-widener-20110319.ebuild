@@ -7,7 +7,7 @@ inherit eutils git-2
 DESCRIPTION="A simple stereo widener plugin for DeaDBeeF."
 HOMEPAGE="https://gitorious.org/deadbeef-sm-plugins/stereo-widener"
 EGIT_REPO_URI="git://gitorious.org/deadbeef-sm-plugins/stereo-widener.git"
-EGIT_COMMIT="13cd15cabca5191f6fa46356a60dd352071cbd22"
+EGIT_COMMIT="d3990d772b02cdc6206f067748f5d1f9650616fb"
 
 LICENSE="MIT"
 SLOT="0"
