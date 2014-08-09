@@ -23,6 +23,6 @@ src_prepare() {
 
 src_install(){
 	insinto "/usr/$(get_libdir)/deadbeef"
-	doins "${S}/ddb_stereo_widener.so" || die
+	doins "${S}/stereo_widener.so" || die
 	dodoc "${S}/COPYING" || die
 }

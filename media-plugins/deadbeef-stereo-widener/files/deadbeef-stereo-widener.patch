@@ -6,7 +6,7 @@ index 0fb6aaa..7ca9545 100644
 -all:
 -	gcc -I/usr/local/include  -std=c99 -shared -O2 -o stereo_widener.so stereo_widener.c -fPIC -Wall -march=native
 +CC?=gcc
-+OUT=ddb_stereo_widener.so
++OUT=stereo_widener.so
 +
 +CFLAGS+=-std=c99 -fPIC -Wall
 +LDFLAGS+=-shared
