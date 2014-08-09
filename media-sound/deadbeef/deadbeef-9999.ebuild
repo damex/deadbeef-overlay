@@ -104,7 +104,8 @@ RDEPEND="aac? ( media-libs/faad2 )
 	cdda? ( dev-libs/libcdio media-libs/libcddb )
 	cover? ( cover-imlib2? ( media-libs/imlib2 )
 		media-libs/libpng
-		virtual/jpeg )
+		virtual/jpeg
+		x11-libs/gdk-pixbuf[jpeg] )
 	curl? ( net-misc/curl )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac )
