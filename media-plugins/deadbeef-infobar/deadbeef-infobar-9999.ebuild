@@ -15,6 +15,7 @@ IUSE="+gtk2 gtk3"
 REQUIRED_USE="|| ( gtk2 gtk3 )"
 
 RDEPEND="dev-libs/libxml2
+	x11-libs/gdk-pixbuf[jpeg]
 	media-sound/deadbeef[curl]
 	gtk2? ( media-sound/deadbeef[gtk2] )
 	gtk3? ( media-sound/deadbeef[gtk3] )"
