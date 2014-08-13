@@ -2,30 +2,26 @@
 
 EAPI="5"
 
-inherit cmake-utils
+DEADBEEF_GUI="yes"
 
-MY_PN="db-vk"
+inherit cmake-utils deadbeef-plugins
+
+GITHUB_USERNAME="scorpp"
+GITHUB_REPOSITORY="db-vk"
 
 DESCRIPTION="DeadBeef plugin for listening music from vkontakte.com"
-HOMEPAGE="https://github.com/scorpp/db-vk"
-SRC_URI="https://github.com/scorpp/${MY_PN}/archive/v${PV}.tar.gz"
-
-RESTRICT="mirror"
+HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
+SRC_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS="~*"
-IUSE="+gtk2 gtk3"
-REQUIRED_USE="|| ( gtk2 gtk3 )"
 
 RDEPEND="dev-libs/json-glib
-	media-sound/deadbeef[curl]
-	gtk2? ( media-sound/deadbeef[gtk2] )
-	gtk3? ( media-sound/deadbeef[gtk3] )"
+	media-sound/deadbeef[curl]"
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
+S="${WORKDIR}/${GITHUB_REPOSITORY}-${PV}"
 
 src_configure() {
 	mycmakeargs="
@@ -35,14 +31,6 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-src_install() {
-	if use gtk2 ; then
-		insinto "/usr/$(get_libdir)/deadbeef"
-		doins "${WORKDIR}/${P}_build/vkontakte_gtk2.so" || die
-	fi
-
-	if use gtk3 ; then
-		insinto "/usr/$(get_libdir)/deadbeef"
-		doins "${WORKDIR}/${P}_build/vkontakte_gtk3.so" || die
-	fi
+src_compile() {
+	cmake-utils_src_compile
 }

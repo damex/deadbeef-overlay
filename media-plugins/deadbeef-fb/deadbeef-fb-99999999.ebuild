@@ -2,24 +2,18 @@
 
 EAPI="5"
 
-inherit autotools eutils git-2
+DEADBEEF_GUI="yes"
 
-EGIT_REPO_URI="git://git.code.sf.net/p/deadbeef-fb/code"
+inherit autotools deadbeef-plugins eutils git-2
+
+EGIT_REPO_URI="git://git.code.sf.net/p/${PN}/code"
 EGIT_BRANCH="master"
 
 DESCRIPTION="DeaDBeeF filebrowser plugin"
-HOMEPAGE="http://sourceforge.net/projects/deadbeef-fb/"
+HOMEPAGE="http://sourceforge.net/projects/${PN}"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS=""
-IUSE="+gtk2 gtk3"
-REQUIRED_USE="|| ( gtk2 gtk3 )"
-
-RDEPEND="gtk2? ( media-sound/deadbeef[gtk2] )
-	gtk3? ( media-sound/deadbeef[gtk3] )"
-
-DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/deadbeef-devel"
 
@@ -37,16 +31,4 @@ src_configure() {
 	econf --disable-static \
 		$(use_enable gtk2) \
 		$(use_enable gtk3)
-}
-
-src_install() {
-	if use gtk2 ; then
-		insinto "/usr/$(get_libdir)/deadbeef"
-		doins "${S}/.libs/ddb_misc_filebrowser_GTK2.so" || die
-	fi
-
-	if use gtk3 ; then
-		insinto "/usr/$(get_libdir)/deadbeef"
-		doins "${S}/.libs/ddb_misc_filebrowser_GTK3.so" || die
-	fi
 }

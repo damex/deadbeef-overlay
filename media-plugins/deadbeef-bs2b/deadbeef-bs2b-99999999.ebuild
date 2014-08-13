@@ -2,28 +2,22 @@
 
 EAPI="5"
 
-inherit eutils git-2
+inherit deadbeef-plugins eutils git-2
+
+GITORIOUS_PROJECT="deadbeef-sm-plugins"
+GITORIOUS_REPOSITORY="bs2b"
 
 DESCRIPTION="bs2b DSP plugin for DeaDBeeF, using libbs2b."
-HOMEPAGE="https://gitorious.org/deadbeef-sm-plugins/bs2b"
-EGIT_REPO_URI="git://gitorious.org/deadbeef-sm-plugins/bs2b.git"
+HOMEPAGE="https://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}"
+EGIT_REPO_URI="git://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}.git"
 
 LICENSE="MIT"
-SLOT="0"
 KEYWORDS=""
-IUSE=""
 
-RDEPEND="media-libs/libbs2b
-	media-sound/deadbeef"
+RDEPEND="media-libs/libbs2b"
 
 DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}.patch"
-}
-
-src_install(){
-	insinto "/usr/$(get_libdir)/deadbeef"
-	doins "${S}/ddb_bs2b.so" || die
-	dodoc "${S}/COPYING" || die
 }

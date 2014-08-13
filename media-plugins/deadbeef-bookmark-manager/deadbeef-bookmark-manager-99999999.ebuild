@@ -2,22 +2,14 @@
 
 EAPI="5"
 
-inherit git-2
+inherit deadbeef-plugins git-2
+
+GITHUB_USERNAME="cboxdoerfer"
+GITHUB_REPOSITORY="ddb_bookmark_manager"
 
 DESCRIPTION="Bookmark Manager plugin for DeaDBeeF audio player"
-HOMEPAGE="https://github.com/cboxdoerfer/ddb_bookmark_manager"
-EGIT_REPO_URI="https://github.com/cboxdoerfer/ddb_bookmark_manager.git"
+HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
+EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}.git"
 
 LICENSE="GPL-2"
-SLOT="0"
 KEYWORDS=""
-IUSE=""
-
-RDEPEND="media-sound/deadbeef"
-
-DEPEND="${RDEPEND}"
-
-src_install() {
-	insinto "/usr/$(get_libdir)/deadbeef"
-	doins "${S}/ddb_misc_bookmark_manager.so" || die
-}
