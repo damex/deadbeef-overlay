@@ -2,7 +2,7 @@
 
 EAPI="5"
 
-inherit deadbeef-plugins eutils subversion
+inherit deadbeef-plugins subversion
 
 ASSEMBLA_PROJECT="deadbeef_vfs_archive_reader"
 

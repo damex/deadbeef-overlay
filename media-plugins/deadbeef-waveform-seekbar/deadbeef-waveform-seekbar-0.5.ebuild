@@ -4,7 +4,7 @@ EAPI="5"
 
 DEADBEEF_GUI="yes"
 
-inherit deadbeef-plugins eutils
+inherit deadbeef-plugins
 
 GITHUB_USERNAME="cboxdoerfer"
 GITHUB_REPOSITORY="ddb_waveform_seekbar"

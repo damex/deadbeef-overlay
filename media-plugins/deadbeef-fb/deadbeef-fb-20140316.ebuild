@@ -4,7 +4,7 @@ EAPI="5"
 
 DEADBEEF_GUI="yes"
 
-inherit autotools deadbeef-plugins eutils
+inherit autotools deadbeef-plugins
 
 DESCRIPTION="DeaDBeeF filebrowser plugin"
 HOMEPAGE="http://sourceforge.net/projects/${PN}"

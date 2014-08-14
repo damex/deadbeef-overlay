@@ -1,5 +1,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
+inherit eutils
+
 : ${SLOT:=0}
 
 RDEPEND="${RDEPEND} media-sound/deadbeef"

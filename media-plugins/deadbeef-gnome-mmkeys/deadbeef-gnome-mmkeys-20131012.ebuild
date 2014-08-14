@@ -2,7 +2,7 @@
 
 EAPI="5"
 
-inherit deadbeef-plugins eutils git-2
+inherit deadbeef-plugins git-2
 
 GITHUB_USERNAME="barthez"
 

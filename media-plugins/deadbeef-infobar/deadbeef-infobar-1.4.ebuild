@@ -4,7 +4,7 @@ EAPI="5"
 
 DEADBEEF_GUI="yes"
 
-inherit deadbeef-plugins eutils
+inherit deadbeef-plugins
 
 DESCRIPTION="Infobar plugin for DeadBeeF audio player. Shows lyrics and artist's biography for the current track."
 HOMEPAGE="https://bitbucket.org/dsimbiriatin/${PN}/wiki/Home"
