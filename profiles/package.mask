@@ -1,5 +1,5 @@
 # do not let people accidentally install live ebuilds
-=media-plugins/deadbeef-archive-reader-9999
+=media-plugins/deadbeef-archive-reader-99999999
 =media-plugins/deadbeef-bookmark-manager-99999999
 =media-plugins/deadbeef-bs2b-99999999
 =media-plugins/deadbeef-fb-99999999

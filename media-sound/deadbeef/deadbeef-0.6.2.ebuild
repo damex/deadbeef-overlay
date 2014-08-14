@@ -61,9 +61,9 @@ LICENSE="BSD
 
 SLOT="0"
 
-IUSE_DEADBEEF_PLUGINS="bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack musical-spectrum replaygain-control spectrogram stereo-widener vk waveform-seekbar"
+IUSE_DEADBEEF_PLUGINS="archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack musical-spectrum replaygain-control spectrogram stereo-widener vk waveform-seekbar"
 
-IUSE="+alsa +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis +flac
+IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
 	ffmpeg gme gtk3 lastfm mac midi mms mono2stereo musepack nls lastfm libnotify libsamplerate
 	nullout oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vtx wavpack wma zip
@@ -85,7 +85,8 @@ for lang in ${LANGS} ; do
 	IUSE+=" linguas_${lang}"
 done
 
-PDEPEND="bookmark-manager? ( media-plugins/deadbeef-bookmark-manager )
+PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
+	bookmark-manager? ( media-plugins/deadbeef-bookmark-manager )
 	bs2b? ( media-plugins/deadbeef-bs2b )
 	filebrowser? ( media-plugins/deadbeef-fb )
 	gnome-mmkeys? ( media-plugins/deadbeef-gnome-mmkeys )
