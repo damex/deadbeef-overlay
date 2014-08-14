@@ -61,12 +61,12 @@ LICENSE="BSD
 
 SLOT="0"
 
-IUSE_DEADBEEF_PLUGINS="archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack musical-spectrum replaygain-control spectrogram stereo-widener vk waveform-seekbar"
+IUSE_DEADBEEF_PLUGINS="archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack musical-spectrum opus replaygain-control spectrogram stereo-widener vk waveform-seekbar"
 
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
-	ffmpeg gme gtk3 lastfm mac midi mms mono2stereo musepack nls lastfm libnotify libsamplerate
-	nullout oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vtx wavpack wma zip
+	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac midi mms mono2stereo musepack nls nullout
+	oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vtx wavpack wma zip
 	${IUSE_DEADBEEF_PLUGINS}"
 
 REQUIRED_USE="cover-imlib2? ( cover )
@@ -93,6 +93,7 @@ PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	infobar? ( media-plugins/deadbeef-infobar )
 	jack? ( media-plugins/deadbeef-jack )
 	musical-spectrum? ( media-plugins/deadbeef-musical-spectrum )
+	opus? ( media-plugins/deadbeef-opus )
 	replaygain-control? ( media-plugins/deadbeef-replaygain-control )
 	spectrogram? ( media-plugins/deadbeef-spectrogram )
 	stereo-widener? ( media-plugins/deadbeef-stereo-widener )

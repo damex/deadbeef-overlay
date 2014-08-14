@@ -9,11 +9,12 @@ BITBUCKET_USERNAME="Lithopsian"
 DESCRIPTION="Ogg Opus decoder plugin for DeaDBeeF audio player"
 HOMEPAGE="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN}/overview"
 EGIT_REPO_URI="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN}.git"
+EGIT_COMMIT="f2be0ac698227ee02d0bb21d2a688858fd4d5fb7"
 
 RESTRICT="strip"
 
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~*"
 
 RDEPEND=">=media-libs/opusfile-0.5[float,http]
 	media-libs/libogg"
