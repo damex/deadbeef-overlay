@@ -61,7 +61,7 @@ LICENSE="BSD
 
 SLOT="0"
 
-IUSE_DEADBEEF_PLUGINS="bookmark-manager bs2b filebrowser infobar jack musical-spectrum replaygain-control spectrogram stereo-widener vk waveform-seekbar"
+IUSE_DEADBEEF_PLUGINS="bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack musical-spectrum replaygain-control spectrogram stereo-widener vk waveform-seekbar"
 
 IUSE="+alsa +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis +flac
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
@@ -88,6 +88,7 @@ done
 PDEPEND="bookmark-manager? ( media-plugins/deadbeef-bookmark-manager )
 	bs2b? ( media-plugins/deadbeef-bs2b )
 	filebrowser? ( media-plugins/deadbeef-fb )
+	gnome-mmkeys? ( media-plugins/deadbeef-gnome-mmkeys )
 	infobar? ( media-plugins/deadbeef-infobar )
 	jack? ( media-plugins/deadbeef-jack )
 	musical-spectrum? ( media-plugins/deadbeef-musical-spectrum )
