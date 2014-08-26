@@ -6,7 +6,7 @@ inherit deadbeef-plugins subversion
 
 ASSEMBLA_PROJECT="deadbeef_vfs_archive_reader"
 
-DESCRIPTION="Dedbeef plugin for play files directly from RAR, 7z and Gzip archive files"
+DESCRIPTION="DeaDBeeF vfs archive reader plugin with gzip, 7z and rar support"
 HOMEPAGE="http://subversion.assembla.com/svn/${ASSEMBLA_PROJECT}"
 ESVN_REPO_URI="http://subversion.assembla.com/svn/${ASSEMBLA_PROJECT}/trunk/src"
 ESVN_REVISION="16"
