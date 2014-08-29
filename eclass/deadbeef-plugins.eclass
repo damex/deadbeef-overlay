@@ -35,7 +35,7 @@ deadbeef-plugins_src_compile() {
 
 deadbeef-plugins_src_install() {
 	local plugins=`find "${WORKDIR}" -name "*.so"`
-	for plugin in "${plugins}"
+	for plugin in ${plugins}
 		do
 			insinto "/usr/$(get_libdir)/deadbeef"
 			doins "${plugin}" || die
