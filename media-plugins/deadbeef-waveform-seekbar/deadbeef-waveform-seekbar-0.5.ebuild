@@ -9,7 +9,7 @@ inherit deadbeef-plugins
 GITHUB_USERNAME="cboxdoerfer"
 GITHUB_REPOSITORY="ddb_waveform_seekbar"
 
-DESCRIPTION="Waveform Seekbar plugin for DeaDBeeF audio player"
+DESCRIPTION="DeaDBeeF waveform seekbar plugin"
 HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
 SRC_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

@@ -9,7 +9,7 @@ inherit deadbeef-plugins git-2
 GITHUB_USERNAME="cboxdoerfer"
 GITHUB_REPOSITORY="ddb_replaygain_control"
 
-DESCRIPTION="Replay Gain Control Plugin for the DeaDBeeF Audio Player"
+DESCRIPTION="DeaDBeeF replay gain control plugin"
 HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
 EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}.git"
 

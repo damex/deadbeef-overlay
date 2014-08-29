@@ -9,7 +9,7 @@ inherit cmake-utils deadbeef-plugins
 GITHUB_USERNAME="scorpp"
 GITHUB_REPOSITORY="db-vk"
 
-DESCRIPTION="DeadBeef plugin for listening music from vkontakte.com"
+DESCRIPTION="DeaDBeeF plugin for listening music from vkontakte.com"
 HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
 SRC_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

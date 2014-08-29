@@ -7,7 +7,7 @@ inherit deadbeef-plugins git-2
 GITORIOUS_PROJECT="deadbeef-sm-plugins"
 GITORIOUS_REPOSITORY="bs2b"
 
-DESCRIPTION="bs2b DSP plugin for DeaDBeeF, using libbs2b."
+DESCRIPTION="DeaDBeeF bs2b dsp plugin"
 HOMEPAGE="https://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}"
 EGIT_REPO_URI="git://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}.git"
 

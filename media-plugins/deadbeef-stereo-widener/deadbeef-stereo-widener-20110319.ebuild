@@ -7,7 +7,7 @@ inherit deadbeef-plugins git-2
 GITORIOUS_PROJECT="deadbeef-sm-plugins"
 GITORIOUS_REPOSITORY="stereo-widener"
 
-DESCRIPTION="A simple stereo widener plugin for DeaDBeeF."
+DESCRIPTION="DeaDBeeF simple stereo widener plugin"
 HOMEPAGE="https://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}"
 EGIT_REPO_URI="git://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}.git"
 EGIT_COMMIT="d3990d772b02cdc6206f067748f5d1f9650616fb"

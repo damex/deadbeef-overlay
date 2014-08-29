@@ -6,7 +6,7 @@ inherit deadbeef-plugins
 
 BITBUCKET_USERNAME="Lithopsian"
 
-DESCRIPTION="Ogg Opus decoder plugin for DeaDBeeF audio player"
+DESCRIPTION="DeaDBeeF ogg opus decoder plugin"
 HOMEPAGE="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN}/overview"
 SRC_URI="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN}/downloads/opus-${PV}.tar.gz -> ${P}.tar.gz"
 

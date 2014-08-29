@@ -6,7 +6,7 @@ DEADBEEF_GUI="yes"
 
 inherit deadbeef-plugins mercurial
 
-DESCRIPTION="Infobar plugin for DeadBeeF audio player. Shows lyrics and artist's biography for the current track."
+DESCRIPTION="DeaDBeeF infobar plugin that shows lyrics and artist's biography for the current track"
 HOMEPAGE="https://bitbucket.org/dsimbiriatin/${PN}/wiki/Home"
 EHG_REPO_URI="https://bitbucket.org/dsimbiriatin/${PN}"
 
