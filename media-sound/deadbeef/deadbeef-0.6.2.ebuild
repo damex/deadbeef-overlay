@@ -18,10 +18,10 @@ LICENSE="BSD
 	ZLIB
 	aac? ( GPL GPL-2 )
 	adplug? ( LGPL-2.1 ZLIB )
-	alsa? ( GPL-2 )
 	alac? ( MIT GPL-2 )
-	cover? ( ZLIB )
+	alsa? ( GPL-2 )
 	cdda? ( GPL-2 LGPL-2 GPL-3 )
+	cover? ( ZLIB )
 	converter? ( GPL-2 )
 	curl? ( curl ZLIB )
 	dts? ( GPL-2 )
@@ -138,7 +138,7 @@ src_prepare() {
 	if use midi ; then
 		# set default gentoo path
 		sed -e 's;/etc/timidity++/timidity-freepats.cfg;/usr/share/timidity/freepats/timidity.cfg;g' \
-		-i "${S}/plugins/wildmidi/wildmidiplug.c" || die
+			-i "${S}/plugins/wildmidi/wildmidiplug.c" || die
 	fi
 
 	if ! use unity ; then
@@ -208,11 +208,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if use midi ; then
-		einfo "enable the freepats support for wildmidi manually, using the following command:"
-		einfo "eselect timidity set --global freepats"
-	fi
-
 	if use gtk2 || use gtk3 ; then
 		fdo-mime_desktop_database_update
 		fdo-mime_mime_database_update
