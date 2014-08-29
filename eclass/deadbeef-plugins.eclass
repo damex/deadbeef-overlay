@@ -9,7 +9,7 @@ DEPEND="${DEPEND} media-sound/deadbeef"
 
 RESTRICT="mirror"
 
-if [[ ${DEADBEEF_GUI} == yes ]] ; then
+if [[ "${DEADBEEF_GUI}" == "yes" ]] ; then
 	IUSE+=" +gtk2 gtk3"
 	REQUIRED_USE="|| ( gtk2 gtk3 )"
 	RDEPEND="${RDEPEND}
@@ -34,8 +34,8 @@ deadbeef-plugins_src_compile() {
 }
 
 deadbeef-plugins_src_install() {
-	local plugins=`find "${WORKDIR}" -name '*.so'`
-	for plugin in $plugins
+	local plugins=`find "${WORKDIR}" -name "*.so"`
+	for plugin in "${plugins}"
 		do
 			insinto "/usr/$(get_libdir)/deadbeef"
 			doins "${plugin}" || die

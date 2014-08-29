@@ -11,7 +11,7 @@ EGIT_BOOTSTRAP="autogen.sh"
 KEYWORDS=""
 
 DESCRIPTION="foobar2k-like music player"
-HOMEPAGE="http://deadbeef.sourceforge.net/"
+HOMEPAGE="http://deadbeef.sourceforge.net"
 
 LICENSE="BSD
 	UNICODE
