@@ -24,9 +24,3 @@ src_prepare() {
 
 	eautoreconf
 }
-
-src_configure() {
-	econf --disable-static \
-		$(use_enable gtk2) \
-		$(use_enable gtk3)
-}
