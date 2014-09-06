@@ -33,6 +33,10 @@ deadbeef-plugins_src_configure() {
 				$(cmake-utils_use_with gtk3 GTK3)"
 			cmake-utils_src_configure
 		fi
+	else
+		if ! in_iuse gtk2 || ! in_iuse gtk3 && [[ -f "${S}/configure" ]] ; then
+			econf --disable-static
+		fi
 	fi
 }
 
@@ -46,6 +50,9 @@ deadbeef-plugins_src_compile() {
 			emake gtk3
 		fi
 
+		if in_iuse gtk2 && in_iuse gtk3 && [[ -f "${S}/Makefile" ]] ; then
+			emake
+		fi
 	else
 		if ! in_iuse gtk2 || ! in_iuse gtk3 && [[ -f "${S}/Makefile" ]] ; then
 			emake
