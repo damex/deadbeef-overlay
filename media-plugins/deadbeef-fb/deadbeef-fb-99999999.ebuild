@@ -21,6 +21,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-avoid-version.patch"
 
 	if use gtk3 ; then
+		epatch "${FILESDIR}/${PN}-gtk3-version.patch"
 		epatch "${FILESDIR}/${PN}-stop-treating-warnings-as-errors.patch"
 	fi
 
