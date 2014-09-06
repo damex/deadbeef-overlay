@@ -67,7 +67,8 @@ IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 	oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vtx wavpack wma zip"
 
 # deadbeef third party plugins
-IUSE+=" archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack musical-spectrum opus replaygain-control spectrogram stereo-widener vk waveform-seekbar"
+IUSE+=" archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack mpris musical-spectrum
+	opus replaygain-control spectrogram stereo-widener vk waveform-seekbar"
 
 REQUIRED_USE="cover-imlib2? ( cover )
 	cover-network? ( cover curl )
@@ -92,6 +93,7 @@ PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	gnome-mmkeys? ( media-plugins/deadbeef-gnome-mmkeys )
 	infobar? ( media-plugins/deadbeef-infobar )
 	jack? ( media-plugins/deadbeef-jack )
+	mpris? ( media-plugins/deadbeef-mpris )
 	musical-spectrum? ( media-plugins/deadbeef-musical-spectrum )
 	replaygain-control? ( media-plugins/deadbeef-replaygain-control )
 	spectrogram? ( media-plugins/deadbeef-spectrogram )
