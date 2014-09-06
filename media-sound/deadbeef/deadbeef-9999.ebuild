@@ -61,13 +61,13 @@ LICENSE="BSD
 
 SLOT="0"
 
-IUSE_DEADBEEF_PLUGINS="archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack musical-spectrum replaygain-control spectrogram stereo-widener vk waveform-seekbar"
-
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
 	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac midi mms mono2stereo musepack nls nullout
-	oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vtx wavpack wma zip
-	${IUSE_DEADBEEF_PLUGINS}"
+	oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vtx wavpack wma zip"
+
+# deadbeef third party plugins
+IUSE+=" archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack musical-spectrum opus replaygain-control spectrogram stereo-widener vk waveform-seekbar"
 
 REQUIRED_USE="cover-imlib2? ( cover )
 	cover-network? ( cover curl )
