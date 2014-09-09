@@ -41,16 +41,19 @@ deadbeef-plugins_src_configure() {
 }
 
 deadbeef-plugins_src_compile() {
+	local find_gtk2=`grep "gtk2:" "${S}/Makefile"`
+	local find_gtk3=`grep "gtk3:" "${S}/Makefile"`
+
 	if [[ "${DEADBEEF_GUI}" == "yes" ]] ; then
-		if in_iuse gtk2 && use gtk2 && [[ -f "${S}/Makefile" ]] && grep -q "gtk2:" "${S}/Makefile" ; then
+		if in_iuse gtk2 && use gtk2 && [[ -f "${S}/Makefile" ]] && [[ -n "${find_gtk2}" ]] ; then
 			emake gtk2
 		fi
 
-		if in_iuse gtk3 && use gtk3 && [[ -f "${S}/Makefile" ]] && grep -q "gtk3:" "${S}/Makefile" ; then
+		if in_iuse gtk3 && use gtk3 && [[ -f "${S}/Makefile" ]] && [[ -n "${find_gtk3}" ]] ; then
 			emake gtk3
 		fi
 
-		if in_iuse gtk2 && in_iuse gtk3 && [[ -f "${S}/Makefile" ]] ; then
+		if in_iuse gtk2 && in_iuse gtk3 && [[ -f "${S}/Makefile" ]] && [[ ! -n "${find_gtk2}" ]] && [[ ! -n "${find_gtk3}" ]] ; then
 			emake
 		fi
 	else
