@@ -2,7 +2,12 @@
 
 EAPI="5"
 
-inherit eutils fdo-mime gnome2-utils
+PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja kk km lg
+	lt nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
+
+PLOCALE_BACKUP="en_GB"
+
+inherit eutils fdo-mime gnome2-utils l10n
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
@@ -78,13 +83,6 @@ REQUIRED_USE="cover-imlib2? ( cover )
 	pltbrowser? ( || ( gtk2 gtk3 ) )
 	shellexecui? ( || ( gtk2 gtk3 ) shellexec )
 	|| ( alsa oss pulseaudio nullout )"
-
-LANGS="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja kk km lg
-	lt nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
-
-for lang in ${LANGS} ; do
-	IUSE+=" linguas_${lang}"
-done
 
 PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	bookmark-manager? ( media-plugins/deadbeef-bookmark-manager )
@@ -205,24 +203,23 @@ src_configure() {
 pkg_preinst() {
 	if use gtk2 || use gtk3 ; then
 		gnome2_icon_savelist
-		gnome2_schemas_savelist
 	fi
 }
 
 pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+
 	if use gtk2 || use gtk3 ; then
-		fdo-mime_desktop_database_update
-		fdo-mime_mime_database_update
 		gnome2_icon_cache_update
-		gnome2_schemas_update
 	fi
 }
 
 pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+
 	if use gtk2 || use gtk3 ; then
-		fdo-mime_desktop_database_update
-		fdo-mime_mime_database_update
 		gnome2_icon_cache_update
-		gnome2_schemas_update
 	fi
 }
