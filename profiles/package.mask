@@ -12,5 +12,6 @@
 =media-plugins/deadbeef-spectrogram-99999999
 =media-plugins/deadbeef-stereo-widener-99999999
 =media-plugins/deadbeef-vk-9999
+=media-plugins/deadbeef-vu-meter-99999999
 =media-plugins/deadbeef-waveform-seekbar-9999
 =media-sound/deadbeef-9999
