@@ -52,7 +52,7 @@ LICENSE="BSD
 	musepack? ( BSD ZLIB )
 	nullout? ( ZLIB )
 	oss? ( GPL-2 )
-	pltbrowser? ( ZLIB )
+	playlist-browser? ( ZLIB )
 	psf? ( BSD GPL MAME ZLIB )
 	pulseaudio? ( GPL-2 )
 	shellexec? ( GPL-2 )
@@ -71,18 +71,18 @@ SLOT="0"
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
 	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac midi mms mono2stereo musepack nls nullout
-	oss psf pulseaudio pltbrowser shellexec shellexecui shn sid tta unity vtx wavpack wma zip"
+	oss playlist-browser psf pulseaudio shellexec shellexecui shn sid tta unity vtx wavpack wma zip"
 
 # deadbeef third party plugins
 IUSE+=" archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack mpris musical-spectrum
 	opus replaygain-control spectrogram stereo-widener vk waveform-seekbar"
 
-REQUIRED_USE="cover-imlib2? ( cover )
+REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
+	cover-imlib2? ( cover )
 	cover-network? ( cover curl )
-	converter? ( || ( gtk2 gtk3 ) )
 	cover? ( || ( gtk2 gtk3 ) )
 	lastfm? ( curl )
-	pltbrowser? ( || ( gtk2 gtk3 ) )
+	playlist-browser? ( || ( gtk2 gtk3 ) )
 	shellexecui? ( || ( gtk2 gtk3 ) shellexec )
 	|| ( alsa oss pulseaudio nullout )"
 
@@ -139,6 +139,21 @@ DEPEND="${RDEPEND}
 		dev-util/intltool )"
 
 src_prepare() {
+        if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
+                epatch "${FILESDIR}/${PN}-remove-pt_br-help-translaton.patch"
+                rm "${S}/translation/help.pt_BR.txt" || die
+        fi
+
+        if ! use_if_iuse linguas_ru && use_if_iuse linguas_pt_BR ; then
+                epatch "${FILESDIR}/${PN}-remove-ru-help-translaton.patch"
+                rm "${S}/translation/help.ru.txt" || die
+	fi
+
+        if ! use_if_iuse linguas_pt_BR && ! use_if_iuse linguas_ru ; then
+                epatch "${FILESDIR}/${PN}-remove-pt_br-and-ru-help-translaton.patch"
+                rm "${S}/translation/help.pt_BR.txt" "${S}/translation/help.ru.txt" || die
+        fi
+
 	if use midi ; then
 		# set default gentoo path
 		sed -e 's;/etc/timidity++/timidity-freepats.cfg;/usr/share/timidity/freepats/timidity.cfg;g' \
@@ -188,9 +203,9 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable nullout) \
 		$(use_enable oss) \
-		$(use_enable pulseaudio pulse) \
-		$(use_enable pltbrowser) \
+		$(use_enable playlist-browser pltbrowser) \
 		$(use_enable psf) \
+		$(use_enable pulseaudio pulse) \
 		$(use_enable shellexec shellexec) \
 		$(use_enable shellexecui shellexecui) \
 		$(use_enable shn) \
