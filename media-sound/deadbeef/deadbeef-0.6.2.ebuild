@@ -73,7 +73,7 @@ IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 
 # deadbeef third party plugins
 IUSE+=" archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack mpris musical-spectrum
-	opus replaygain-control spectrogram stereo-widener vk waveform-seekbar"
+	opus replaygain-control spectrogram stereo-widener vk vu-meter waveform-seekbar"
 
 REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	cover-imlib2? ( cover )
@@ -98,6 +98,7 @@ PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	spectrogram? ( media-plugins/deadbeef-spectrogram )
 	stereo-widener? ( media-plugins/deadbeef-stereo-widener )
 	vk? ( media-plugins/deadbeef-vk )
+	vu-meter? ( media-plugins/deadbeef-vu-meter )
 	waveform-seekbar? ( media-plugins/deadbeef-waveform-seekbar )"
 
 RDEPEND="aac? ( media-libs/faad2 )
