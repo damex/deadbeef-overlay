@@ -36,7 +36,7 @@
 		<flag name='nls'>Native Language Support (NLS)</flag>
 		<flag name='nullout'>NULL output plugin</flag>
 		<flag name='oss'>Open Sound System (OSS) output plugin</flag>
-		<flag name='paylist-browser'>Playlist browser user interface plugin</flag>
+		<flag name='playlist-browser'>Playlist browser user interface plugin</flag>
 		<flag name='psf'>AOSDK-based PSF(QSF,SSF,DSF) plugin</flag>
 		<flag name='pulseaudio'>PulseAudio output plugin</flag>
 		<flag name='shellexec'>Support for running shell commands</flag>
