@@ -43,7 +43,7 @@
 		<flag name='shellexec'>Support for running shell commands via gui prompt</flag>
 		<flag name='shn'>Shorten (SHN) plugin</flag>
 		<flag name='sid'>Commodore64 SID music player plugin</flag>
-		<flag name='sndfile'>PCM wav support (via libsndfile) plugin</flag>
+		<flag name='sndfile'>PCM wave support (via libsndfile) plugin</flag>
 		<flag name='tta'>True Audio TTA plugin</flag>
 		<flag name='vorbis'>Ogg Vorbis plugin</flag>
 		<flag name='unity'>Gnome Unity support</flag>
