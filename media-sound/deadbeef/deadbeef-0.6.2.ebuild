@@ -53,7 +53,7 @@ LICENSE="BSD
 	playlist-browser? ( ZLIB )
 	psf? ( BSD GPL MAME ZLIB )
 	pulseaudio? ( GPL-2 )
-	shellexec? ( GPL-2 )
+	shell-exec? ( GPL-2 )
 	shn? ( shorten ZLIB )
 	sid? ( GPL-2 )
 	sndfile? ( GPL-2 LGPL-2 )
@@ -69,7 +69,7 @@ SLOT="0"
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
 	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac midi mms mono2stereo musepack nls nullout
-	oss playlist-browser psf pulseaudio shellexec shellexecui shn sid tta unity vtx wavpack wma zip"
+	oss playlist-browser psf pulseaudio shell-exec shellexecui shn sid tta unity vtx wavpack wma zip"
 
 # deadbeef third party plugins
 IUSE+=" archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack mpris musical-spectrum
@@ -81,7 +81,6 @@ REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	cover? ( || ( gtk2 gtk3 ) )
 	lastfm? ( curl )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
-	shellexecui? ( || ( gtk2 gtk3 ) shellexec )
 	|| ( alsa oss pulseaudio nullout )"
 
 PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
@@ -166,56 +165,62 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --disable-coreaudio \
-		--disable-portable \
-		--disable-static \
-		--docdir=/usr/share/${PN} \
-		$(use_enable aac) \
-		$(use_enable adplug) \
-		$(use_enable alac) \
-		$(use_enable alsa) \
-		$(use_enable cdda) \
-		$(use_enable converter) \
-		$(use_enable cover artwork) \
-		$(use_enable cover-imlib2 artwork-imlib2) \
-		$(use_enable cover-network artwork-network) \
-		$(use_enable curl vfs-curl) \
-		$(use_enable dts dca) \
-		$(use_enable dumb) \
-		$(use_enable equalizer supereq) \
-		$(use_enable ffmpeg) \
-		$(use_enable flac) \
-		$(use_enable gme) \
-		$(use_enable gtk2) \
-		$(use_enable gtk3) \
-		$(use_enable hotkeys) \
-		$(use_enable lastfm lfm) \
-		$(use_enable libnotify notify) \
-		$(use_enable libsamplerate src) \
-		$(use_enable m3u) \
-		$(use_enable mac ffap) \
-		$(use_enable midi wildmidi) \
-		$(use_enable mms) \
-		$(use_enable mono2stereo) \
-		$(use_enable mp3 mad) \
-		$(use_enable musepack) \
-		$(use_enable nls) \
-		$(use_enable nullout) \
-		$(use_enable oss) \
-		$(use_enable playlist-browser pltbrowser) \
-		$(use_enable psf) \
-		$(use_enable pulseaudio pulse) \
-		$(use_enable shellexec shellexec) \
-		$(use_enable shellexecui shellexecui) \
-		$(use_enable shn) \
-		$(use_enable sid) \
-		$(use_enable sndfile) \
-		$(use_enable tta) \
-		$(use_enable vorbis) \
-		$(use_enable vtx) \
-		$(use_enable wavpack) \
-		$(use_enable wma) \
-		$(use_enable zip vfs-zip)
+	local deadbeef_configure="
+		--disable-coreaudio
+		--disable-portable
+		--disable-static
+		--docdir=/usr/share/${PN}
+		$(use_enable aac)
+		$(use_enable adplug)
+		$(use_enable alac)
+		$(use_enable alsa)
+		$(use_enable cdda)
+		$(use_enable converter)
+		$(use_enable cover artwork)
+		$(use_enable cover-imlib2 artwork-imlib2)
+		$(use_enable cover-network artwork-network)
+		$(use_enable curl vfs-curl)
+		$(use_enable dts dca)
+		$(use_enable dumb)
+		$(use_enable equalizer supereq)
+		$(use_enable ffmpeg)
+		$(use_enable flac)
+		$(use_enable gme)
+		$(use_enable gtk2)
+		$(use_enable gtk3)
+		$(use_enable hotkeys)
+		$(use_enable lastfm lfm)
+		$(use_enable libnotify notify)
+		$(use_enable libsamplerate src)
+		$(use_enable m3u)
+		$(use_enable mac ffap)
+		$(use_enable midi wildmidi)
+		$(use_enable mms)
+		$(use_enable mono2stereo)
+		$(use_enable mp3 mad)
+		$(use_enable musepack)
+		$(use_enable nls)
+		$(use_enable nullout)
+		$(use_enable oss)
+		$(use_enable playlist-browser pltbrowser)
+		$(use_enable psf)
+		$(use_enable pulseaudio pulse)
+		$(use_enable shell-exec shellexec)
+		$(use_enable shn)
+		$(use_enable sid)
+		$(use_enable sndfile)
+		$(use_enable tta)
+		$(use_enable vorbis)
+		$(use_enable vtx)
+		$(use_enable wavpack)
+		$(use_enable wma)
+		$(use_enable zip vfs-zip)"
+
+	if use shell-exec && use gtk2 || use gtk3 ; then
+		deadbeef_configure+=" --enable-shellexec-ui"
+	fi
+
+	econf "${deadbeef_confugure}"
 }
 
 pkg_preinst() {

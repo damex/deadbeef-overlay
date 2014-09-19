@@ -39,8 +39,7 @@
 		<flag name='playlist-browser'>Playlist browser user interface plugin</flag>
 		<flag name='psf'>AOSDK-based PSF(QSF,SSF,DSF) plugin</flag>
 		<flag name='pulseaudio'>PulseAudio output plugin</flag>
-		<flag name='shellexec'>Support for running shell commands</flag>
-		<flag name='shellexec'>Support for running shell commands via gui prompt</flag>
+		<flag name='shell-exec'>Support for running shell commands</flag>
 		<flag name='shn'>Shorten (SHN) plugin</flag>
 		<flag name='sid'>Commodore64 SID music player plugin</flag>
 		<flag name='sndfile'>PCM wave support (via libsndfile) plugin</flag>
