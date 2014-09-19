@@ -84,9 +84,6 @@ REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
 	|| ( alsa oss pulseaudio nullout )"
 
-PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja kk km lg
-	lt nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
-
 PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	bookmark-manager? ( media-plugins/deadbeef-bookmark-manager )
 	bs2b? ( media-plugins/deadbeef-bs2b )
