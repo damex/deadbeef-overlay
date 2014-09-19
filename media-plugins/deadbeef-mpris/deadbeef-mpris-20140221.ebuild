@@ -2,7 +2,7 @@
 
 EAPI="5"
 
-inherit autotools deadbeef-plugins git-2
+inherit autotools deadbeef-plugins git-r3
 
 GITHUB_USERNAME="Jerry-Ma"
 GITHUB_REPOSITORY="DeaDBeeF-MPRIS-plugin"

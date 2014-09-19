@@ -2,7 +2,7 @@
 
 EAPI="5"
 
-inherit deadbeef-plugins git-2
+inherit deadbeef-plugins git-r3
 
 GITORIOUS_PROJECT="deadbeef-sm-plugins"
 GITORIOUS_REPOSITORY="bs2b"

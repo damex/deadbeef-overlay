@@ -4,7 +4,7 @@ EAPI="5"
 
 DEADBEEF_GUI="yes"
 
-inherit autotools deadbeef-plugins git-2
+inherit autotools deadbeef-plugins git-r3
 
 EGIT_REPO_URI="git://git.code.sf.net/p/${PN}/code"
 EGIT_BRANCH="master"

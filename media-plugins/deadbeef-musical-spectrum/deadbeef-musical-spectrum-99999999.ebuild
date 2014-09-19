@@ -4,7 +4,7 @@ EAPI="5"
 
 DEADBEEF_GUI="yes"
 
-inherit deadbeef-plugins git-2
+inherit deadbeef-plugins git-r3
 
 GITHUB_USERNAME="cboxdoerfer"
 GITHUB_REPOSITORY="ddb_musical_spectrum"

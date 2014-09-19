@@ -7,13 +7,12 @@ PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja k
 
 PLOCALE_BACKUP="en_GB"
 
-inherit eutils fdo-mime git-2 gnome2-utils l10n
+inherit autotools eutils fdo-mime git-r3 gnome2-utils l10n
 
 GITHUB_USERNAME="Alexey-Yakovenko"
 
 EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${PN}.git"
 EGIT_BRANCH="master"
-EGIT_BOOTSTRAP="autogen.sh"
 
 KEYWORDS=""
 
@@ -164,6 +163,9 @@ src_prepare() {
 		# remove unity trash
 		epatch "${FILESDIR}/${PN}-0.6.2-or-higher-remove-unity-trash.patch"
 	fi
+
+	config_rpath_update "${S}/config.rpath"
+	eautoreconf
 }
 
 src_configure() {

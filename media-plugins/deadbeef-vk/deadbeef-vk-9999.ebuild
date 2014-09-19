@@ -4,7 +4,7 @@ EAPI="5"
 
 DEADBEEF_GUI="yes"
 
-inherit cmake-utils deadbeef-plugins git-2
+inherit cmake-utils deadbeef-plugins git-r3
 
 GITHUB_USERNAME="scorpp"
 GITHUB_REPOSITORY="db-vk"
