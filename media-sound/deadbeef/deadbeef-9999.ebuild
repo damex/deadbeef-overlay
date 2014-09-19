@@ -55,7 +55,7 @@ LICENSE="BSD
 	playlist-browser? ( ZLIB )
 	psf? ( BSD GPL MAME ZLIB )
 	pulseaudio? ( GPL-2 )
-	shellexec? ( GPL-2 )
+	shell-exec? ( GPL-2 )
 	shn? ( shorten ZLIB )
 	sid? ( GPL-2 )
 	sndfile? ( GPL-2 LGPL-2 )
@@ -71,7 +71,7 @@ SLOT="0"
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
 	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac midi mms mono2stereo musepack nls nullout
-	oss playlist-browser psf pulseaudio shellexec shellexecui shn sid tta unity vtx wavpack wma zip"
+	oss playlist-browser psf pulseaudio shell-exec shn sid tta unity vtx wavpack wma zip"
 
 # deadbeef third party plugins
 IUSE+=" archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack mpris musical-spectrum
@@ -83,7 +83,6 @@ REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	cover? ( || ( gtk2 gtk3 ) )
 	lastfm? ( curl )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
-	shellexecui? ( || ( gtk2 gtk3 ) shellexec )
 	|| ( alsa oss pulseaudio nullout )"
 
 PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja kk km lg
