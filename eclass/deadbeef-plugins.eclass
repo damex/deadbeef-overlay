@@ -3,7 +3,7 @@
 # @ECLASS: deadbeef-plugins.eclass
 # @MAINTAINER:
 # Roman Kuzmitsky <damex.pp@gmail.com>
-# @BLURB: Eclass for installing deadbeef player plugins.
+# @BLURB: Eclass for automating deadbeef player plugins installation.
 # @DESCRIPTION:
 # This eclass makes trivial deadbeef plugins ebuilds possible.
 # Many things that would normally be done manually is automated.
