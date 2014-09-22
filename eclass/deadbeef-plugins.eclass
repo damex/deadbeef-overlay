@@ -5,7 +5,7 @@
 # Roman Kuzmitsky <damex.pp@gmail.com>
 # @BLURB: Eclass for automating deadbeef player plugins installation.
 # @DESCRIPTION:
-# This eclass makes trivial deadbeef plugins ebuilds possible.
+# This eclass makes trivial deadbeef plugin ebuilds possible.
 # Many things that would normally be done manually is automated.
 
 if [[ "${EAPI}" -lt 5 ]] ; then
