@@ -19,5 +19,3 @@ RDEPEND=">=media-libs/opusfile-0.5[float,http]
 	media-libs/libogg"
 
 DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/opus-${PV}"
