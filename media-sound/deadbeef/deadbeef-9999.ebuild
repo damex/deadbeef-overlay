@@ -166,64 +166,65 @@ src_prepare() {
 }
 
 src_configure() {
-    local deadbeef_configure="
-		--disable-coreaudio
-		--disable-portable
-		--disable-static
-		--docdir=/usr/share/${PN}
-		$(use_enable aac)
-		$(use_enable adplug)
-		$(use_enable alac)
-		$(use_enable alsa)
-		$(use_enable cdda)
-		$(use_enable converter)
-		$(use_enable cover artwork)
-		$(use_enable cover-imlib2 artwork-imlib2)
-		$(use_enable cover-network artwork-network)
-		$(use_enable curl vfs-curl)
-		$(use_enable dts dca)
-		$(use_enable dumb)
-		$(use_enable equalizer supereq)
-		$(use_enable ffmpeg)
-		$(use_enable flac)
-		$(use_enable gme)
-		$(use_enable gtk2)
-		$(use_enable gtk3)
-		$(use_enable hotkeys)
-		$(use_enable lastfm lfm)
-		$(use_enable libnotify notify)
-		$(use_enable libsamplerate src)
-		$(use_enable m3u)
-		$(use_enable mac ffap)
-		$(use_enable midi wildmidi)
-		$(use_enable mms)
-		$(use_enable mono2stereo)
-		$(use_enable mp3 mad)
-		$(use_enable musepack)
-		$(use_enable nls)
-		$(use_enable nullout)
-		$(use_enable oss)
-		$(use_enable playlist-browser pltbrowser)
-		$(use_enable psf)
-		$(use_enable pulseaudio pulse)
-		$(use_enable shell-exec shellexec)
-		$(use_enable shn)
-		$(use_enable sid)
-		$(use_enable sndfile)
-		$(use_enable tta)
-		$(use_enable vorbis)
-		$(use_enable vtx)
-		$(use_enable wavpack)
-		$(use_enable wma)
-		$(use_enable zip vfs-zip)"
-
-	if use shell-exec && use gtk2 || use gtk3 ; then
-		deadbeef_configure+=" --enable-shellexec-ui"
+	if use shell-exec ; then
+		if use gtk2 || use gtk3 ; then
+			shell-exec-ui="--enable-shellexec-ui"
+		else
+			shell-exec_ui="--disable-shellexec-ui"
+		fi
 	fi
 
-	econf "${deadbeef_confugure}"
+	econf --disable-coreaudio \
+		--disable-portable \
+		--disable-static \
+		--docdir=/usr/share/${PN} \
+		${shell-exec-ui} \
+		$(use_enable aac) \
+		$(use_enable adplug) \
+		$(use_enable alac) \
+		$(use_enable alsa) \
+		$(use_enable cdda) \
+		$(use_enable converter) \
+		$(use_enable cover artwork) \
+		$(use_enable cover-imlib2 artwork-imlib2) \
+		$(use_enable cover-network artwork-network) \
+		$(use_enable curl vfs-curl) \
+		$(use_enable dts dca) \
+		$(use_enable dumb) \
+		$(use_enable equalizer supereq) \
+		$(use_enable ffmpeg) \
+		$(use_enable flac) \
+		$(use_enable gme) \
+		$(use_enable gtk2) \
+		$(use_enable gtk3) \
+		$(use_enable hotkeys) \
+		$(use_enable lastfm lfm) \
+		$(use_enable libnotify notify) \
+		$(use_enable libsamplerate src) \
+		$(use_enable m3u) \
+		$(use_enable mac ffap) \
+		$(use_enable midi wildmidi) \
+		$(use_enable mms) \
+		$(use_enable mono2stereo) \
+		$(use_enable mp3 mad) \
+		$(use_enable musepack) \
+		$(use_enable nls) \
+		$(use_enable nullout) \
+		$(use_enable oss) \
+		$(use_enable playlist-browser pltbrowser) \
+		$(use_enable psf) \
+		$(use_enable pulseaudio pulse) \
+		$(use_enable shell-exec shellexec) \
+		$(use_enable shn) \
+		$(use_enable sid) \
+		$(use_enable sndfile) \
+		$(use_enable tta) \
+		$(use_enable vorbis) \
+		$(use_enable vtx) \
+		$(use_enable wavpack) \
+		$(use_enable wma) \
+		$(use_enable zip vfs-zip)
 }
-
 
 pkg_preinst() {
 	if use gtk2 || use gtk3 ; then
