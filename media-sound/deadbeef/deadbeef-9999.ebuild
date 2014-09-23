@@ -170,7 +170,7 @@ src_configure() {
 		if use gtk2 || use gtk3 ; then
 			shell-exec-ui="--enable-shellexec-ui"
 		else
-			shell-exec_ui="--disable-shellexec-ui"
+			shell-exec-ui="--disable-shellexec-ui"
 		fi
 	fi
 
