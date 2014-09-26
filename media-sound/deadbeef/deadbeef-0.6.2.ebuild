@@ -127,7 +127,12 @@ RDEPEND="aac? ( media-libs/faad2 )
 	vorbis? ( media-libs/libogg
 		media-libs/libvorbis )
 	wavpack? ( media-sound/wavpack )
-	zip? ( dev-libs/libzip )"
+	zip? ( dev-libs/libzip )
+	x11-libs/cairo
+	dev-libs/glib
+	dev-libs/atk
+	x11-libs/pango
+	"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
