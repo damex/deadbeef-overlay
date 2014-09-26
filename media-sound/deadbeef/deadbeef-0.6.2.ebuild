@@ -100,7 +100,8 @@ PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	vu-meter? ( media-plugins/deadbeef-vu-meter )
 	waveform-seekbar? ( media-plugins/deadbeef-waveform-seekbar )"
 
-RDEPEND="aac? ( media-libs/faad2 )
+RDEPEND="dev-libs/glib
+	aac? ( media-libs/faad2 )
 	adplug? ( media-libs/adplug )
 	alsa? ( media-libs/alsa-lib )
 	alac? ( media-libs/faad2 )
@@ -113,7 +114,10 @@ RDEPEND="aac? ( media-libs/faad2 )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac )
 	gme? ( sys-libs/zlib )
-	gtk2? ( x11-libs/gtk+:2 )
+	gtk2? ( dev-libs/atk
+		x11-libs/cairo
+		x11-libs/gtk+:2
+		x11-libs/pango )
 	gtk3? ( x11-libs/gtk+:3 )
 	hotkeys? ( x11-libs/libX11 )
 	libnotify? ( sys-apps/dbus )
@@ -127,12 +131,7 @@ RDEPEND="aac? ( media-libs/faad2 )
 	vorbis? ( media-libs/libogg
 		media-libs/libvorbis )
 	wavpack? ( media-sound/wavpack )
-	zip? ( dev-libs/libzip )
-	x11-libs/cairo
-	dev-libs/glib
-	dev-libs/atk
-	x11-libs/pango
-	"
+	zip? ( dev-libs/libzip )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
