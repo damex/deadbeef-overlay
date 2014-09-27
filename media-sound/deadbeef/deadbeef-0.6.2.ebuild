@@ -112,7 +112,8 @@ RDEPEND="dev-libs/glib
 		x11-libs/gdk-pixbuf[jpeg] )
 	curl? ( net-misc/curl )
 	ffmpeg? ( virtual/ffmpeg )
-	flac? ( media-libs/flac )
+	flac? ( media-libs/libogg
+		media-libs/flac )
 	gme? ( sys-libs/zlib )
 	gtk2? ( dev-libs/atk
 		x11-libs/cairo
