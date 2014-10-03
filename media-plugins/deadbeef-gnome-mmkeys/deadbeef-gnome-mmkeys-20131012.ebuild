@@ -2,14 +2,14 @@
 
 EAPI="5"
 
-inherit deadbeef-plugins git-r3
+inherit deadbeef-plugins
 
 GITHUB_USERNAME="barthez"
+GITHUB_COMMIT="8e95cd380ba457fe6b666e5e704aa823d5eca1fa"
 
 DESCRIPTION="DeaDBeeF gnome (via dbus) multimedia keys plugin"
 HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${PN}"
-EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${PN}.git"
-EGIT_COMMIT="8e95cd380ba457fe6b666e5e704aa823d5eca1fa"
+SRC_URI="https://github.com/${GITHUB_USERNAME}/${PN}/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~*"
@@ -17,6 +17,8 @@ KEYWORDS="~*"
 RDEPEND="dev-libs/glib:2"
 
 DEPEND="${RDEPEND}"
+
+S="${WORKDIR}/${PN}-${GITHUB_COMMIT}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}.patch"
