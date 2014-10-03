@@ -14,10 +14,6 @@ SRC_URI="https://github.com/${GITHUB_USERNAME}/${PN}/archive/${GITHUB_COMMIT}.ta
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
-RDEPEND="dev-libs/glib:2"
-
-DEPEND="${RDEPEND}"
-
 S="${WORKDIR}/${PN}-${GITHUB_COMMIT}"
 
 src_prepare() {
