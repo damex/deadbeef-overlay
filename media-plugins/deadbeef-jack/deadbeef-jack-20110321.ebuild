@@ -15,7 +15,7 @@ EGIT_COMMIT="62d1e6ac0452b7baa92fcc75b59bcb960df06da8"
 LICENSE="MIT"
 KEYWORDS="~*"
 
-RDEPEND="media-sound/jack-audio-connection-kit"
+RDEPEND+=" media-sound/jack-audio-connection-kit"
 
 DEPEND="${RDEPEND}"
 

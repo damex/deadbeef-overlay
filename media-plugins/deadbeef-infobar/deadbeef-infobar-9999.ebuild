@@ -13,7 +13,7 @@ EHG_REPO_URI="https://bitbucket.org/dsimbiriatin/${PN}"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-RDEPEND="dev-libs/libxml2
+RDEPEND+=" dev-libs/libxml2
 	x11-libs/gdk-pixbuf[jpeg]
 	media-sound/deadbeef[curl]"
 

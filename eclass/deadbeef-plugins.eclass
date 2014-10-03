@@ -16,17 +16,18 @@ inherit eutils
 
 : ${SLOT:=0}
 
-RDEPEND="${RDEPEND} media-sound/deadbeef"
-DEPEND="${DEPEND} media-sound/deadbeef"
+RDEPEND+=" media-sound/deadbeef"
+DEPEND+=" media-sound/deadbeef"
 
 RESTRICT="mirror"
 
 if [[ "${DEADBEEF_GUI}" == "yes" ]] ; then
 	IUSE+=" +gtk2 gtk3"
 	REQUIRED_USE="|| ( gtk2 gtk3 )"
-	RDEPEND="${RDEPEND}
-		gtk2? ( media-sound/deadbeef[gtk2] )
+	GUI_DEPEND="gtk2? ( media-sound/deadbeef[gtk2] )
 		gtk3? ( media-sound/deadbeef[gtk3] )"
+	RDEPEND+=" ${GUI_DEPEND}"
+	DEPEND+=" ${GUI_DEPEND}"
 fi
 
 EXPORT_FUNCTIONS "src_configure src_compile src_install"

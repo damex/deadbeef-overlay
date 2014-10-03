@@ -16,7 +16,7 @@ EGIT_REPO_URI="git://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}.git"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-RDEPEND="dev-libs/json-glib
+RDEPEND+=" dev-libs/json-glib
 	media-sound/deadbeef[curl]"
 
 DEPEND="${RDEPEND}"

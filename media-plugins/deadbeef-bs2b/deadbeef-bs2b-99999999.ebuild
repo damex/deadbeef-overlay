@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}.
 LICENSE="MIT"
 KEYWORDS=""
 
-RDEPEND="media-libs/libbs2b"
+RDEPEND+=" media-libs/libbs2b"
 
 DEPEND="${RDEPEND}"
 

@@ -17,7 +17,7 @@ SRC_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/archive/${GI
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
-RDEPEND="sci-libs/fftw:3.0"
+RDEPEND+=" sci-libs/fftw:3.0"
 
 DEPEND="${RDEPEND}"
 

@@ -16,7 +16,7 @@ SRC_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/archive/v${P
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
-RDEPEND="dev-libs/json-glib
+RDEPEND+=" dev-libs/json-glib
 	media-sound/deadbeef[curl]"
 
 DEPEND="${RDEPEND}"

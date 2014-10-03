@@ -16,7 +16,7 @@ EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}.git"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-RDEPEND="dev-db/sqlite:3"
+RDEPEND+=" dev-db/sqlite:3"
 
 DEPEND="${RDEPEND}"
 

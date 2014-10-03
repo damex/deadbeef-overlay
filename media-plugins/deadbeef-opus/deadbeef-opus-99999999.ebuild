@@ -15,7 +15,7 @@ RESTRICT="strip"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-RDEPEND=">=media-libs/opusfile-0.5[float,http]
+RDEPEND+=" >=media-libs/opusfile-0.5[float,http]
 	media-libs/libogg"
 
 DEPEND="${RDEPEND}"
