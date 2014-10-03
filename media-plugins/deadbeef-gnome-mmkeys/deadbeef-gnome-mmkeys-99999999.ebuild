@@ -13,6 +13,8 @@ EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${PN}.git"
 LICENSE="GPL-2"
 KEYWORDS=""
 
+RDEPEND+=" sys-apps/dbus"
+
 src_prepare() {
 	epatch "${FILESDIR}/${PN}.patch"
 }
