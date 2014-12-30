@@ -2,21 +2,21 @@
 
 EAPI="5"
 
-inherit autotools deadbeef-plugins git-r3
+inherit autotools deadbeef-plugins
 
 GITHUB_USERNAME="Serranya"
 GITHUB_REPOSITORY="deadbeef-mpris2-plugin"
 
 DESCRIPTION="DeaDBeeF MPRIS plugin"
 HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
-EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}.git"
+SRC_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/releases/download/v${PV}/${GITHUB_REPOSITORY}-${PV}.tar.xz -> ${P}.tar.xz"
 
 LICENSE="GPL-3"
-KEYWORDS=""
+KEYWORDS="~*"
 IUSE=""
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${P/-mpris/}"
 
-src_prepare() {
+src_prepare(){
 	eautoreconf
 }
