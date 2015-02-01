@@ -18,6 +18,8 @@ KEYWORDS="~*"
 
 RDEPEND+=" dev-libs/libxml2"
 
+DEPEND="${RDEPEND}"
+
 S="${WORKDIR}/${BITBUCKET_USERNAME}-${PN/deadbeef-/}-${BITBUCKET_COMMIT}"
 
 src_compile() {
