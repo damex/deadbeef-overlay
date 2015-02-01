@@ -19,6 +19,6 @@ KEYWORDS="~*"
 S="${WORKDIR}/${BITBUCKET_USERNAME}-${PN/deadbeef-/}-${BITBUCKET_COMMIT}"
 
 src_compile() {
-	use gtk2 && GTKVER=2 emake -j1
-	use gtk3 && GTKVER=3 emake -j1
+	use gtk2 && GTKVER=2 emake
+	use gtk3 && GTKVER=3 emake
 }
