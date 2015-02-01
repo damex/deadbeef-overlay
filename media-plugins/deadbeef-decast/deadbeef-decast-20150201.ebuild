@@ -7,7 +7,7 @@ DEADBEEF_GUI="yes"
 inherit deadbeef-plugins
 
 BITBUCKET_USERNAME="thesame"
-BITBUCKET_COMMIT="5cb4be2c2cf0"
+BITBUCKET_COMMIT="9ffd6d6dfb14"
 
 DESCRIPTION="DeaDBeeF podcast subscription plugin"
 HOMEPAGE="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN/deadbeef-/}/overview"
@@ -15,6 +15,8 @@ SRC_URI="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN/deadbeef-/}/get/${BITB
 
 LICENSE="ZLIB"
 KEYWORDS="~*"
+
+RDEPEND+=" dev-libs/libxml2"
 
 S="${WORKDIR}/${BITBUCKET_USERNAME}-${PN/deadbeef-/}-${BITBUCKET_COMMIT}"
 
