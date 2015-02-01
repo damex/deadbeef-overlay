@@ -8,7 +8,7 @@ inherit deadbeef-plugins
 
 GITHUB_USERNAME="cboxdoerfer"
 GITHUB_REPOSITORY="ddb_spectrogram"
-GITHUB_COMMIT="309aba047017c6427d12ded98608c398cf8cbe23"
+GITHUB_COMMIT="8d1b3713f3a3a8a93b4934a4782fb3db7f744fb7"
 
 DESCRIPTION="DeaDBeeF spectrogram plugin"
 HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
