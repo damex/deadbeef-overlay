@@ -12,7 +12,7 @@ DESCRIPTION="DeaDBeeF bookmark manager plugin"
 HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
 SRC_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
-S="${WORKDIR}/${GITHUB_REPOSITORY}-${GITHUB_COMMIT}"
-
 LICENSE="GPL-2"
 KEYWORDS="~*"
+
+S="${WORKDIR}/${GITHUB_REPOSITORY}-${GITHUB_COMMIT}"

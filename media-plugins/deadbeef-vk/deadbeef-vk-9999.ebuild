@@ -22,3 +22,15 @@ RDEPEND+=" dev-libs/json-glib
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${GITHUB_REPOSITORY}-${PV}"
+
+src_configure() {
+	local mycmakeargs="
+		$(cmake-utils_use_with gtk2 GTK2)
+		$(cmake-utils_use_with gtk3 GTK3)"
+
+	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile
+}

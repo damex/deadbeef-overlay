@@ -15,3 +15,8 @@ EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}.git"
 
 LICENSE="GPL-2"
 KEYWORDS=""
+
+src_compile() {
+	use gtk2 && emake gtk2
+	use gtk3 && emake gtk3
+}

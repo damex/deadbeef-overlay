@@ -18,3 +18,8 @@ LICENSE="GPL-2"
 KEYWORDS="~*"
 
 S="${WORKDIR}/${GITHUB_REPOSITORY}-${GITHUB_COMMIT}"
+
+src_compile() {
+	use gtk2 && emake gtk2
+	use gtk3 && emake gtk3
+}

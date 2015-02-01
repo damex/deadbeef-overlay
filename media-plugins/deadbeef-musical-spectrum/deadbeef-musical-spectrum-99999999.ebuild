@@ -23,3 +23,8 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-cflags.patch"
 }
+
+src_compile() {
+	use gtk2 && emake gtk2
+	use gtk3 && emake gtk3
+}

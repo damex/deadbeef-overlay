@@ -17,6 +17,10 @@ IUSE=""
 
 S="${WORKDIR}/${P/-mpris/}"
 
-src_prepare(){
+src_prepare() {
 	eautoreconf
+}
+
+src_configure() {
+	econf --disable-static
 }

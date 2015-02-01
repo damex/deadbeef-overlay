@@ -13,12 +13,19 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
+IUSE+=" debug"
+
 S="${WORKDIR}/deadbeef-fb-devel"
 
 src_prepare() {
-	if use gtk3 ; then
-		epatch "${FILESDIR}/${PN}-gtk3-version.patch"
-	fi
+	epatch "${FILESDIR}/${PN}-avoid-version.patch"
 
 	eautoreconf
+}
+
+src_configure() {
+	econf --disable-static \
+		$(use_enable debug) \
+		$(use_enable gtk2) \
+		$(use_enable gtk3)
 }

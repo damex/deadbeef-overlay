@@ -20,3 +20,7 @@ S="${WORKDIR}/${P}"
 src_prepare() {
 	eautoreconf
 }
+
+src_configure() {
+	econf --disable-static
+}
