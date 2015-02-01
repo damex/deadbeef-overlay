@@ -8,7 +8,7 @@ inherit deadbeef-plugins
 
 GITHUB_USERNAME="cboxdoerfer"
 GITHUB_REPOSITORY="ddb_musical_spectrum"
-GITHUB_COMMIT="0a3c1bbda201fe47a91a30ad1efa428dfa32d2cf"
+GITHUB_COMMIT="ce0f4daaf295186d9d89787870997bbd8e93c674"
 
 DESCRIPTION="DeaDBeeF musical spectrum plugin"
 HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
