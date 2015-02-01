@@ -15,6 +15,7 @@ IUSE="archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack mpris 
 PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	bookmark-manager? ( media-plugins/deadbeef-bookmark-manager )
 	bs2b? ( media-plugins/deadbeef-bs2b )
+	decast? ( media-plugins/deadbeef-decast )
 	filebrowser? ( media-plugins/deadbeef-fb )
 	gnome-mmkeys? ( media-plugins/deadbeef-gnome-mmkeys )
 	infobar? ( media-plugins/deadbeef-infobar )
