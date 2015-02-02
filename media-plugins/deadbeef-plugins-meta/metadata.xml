@@ -9,6 +9,7 @@
 		<flag name='archive'>Reading media files from archived files</flag>
 		<flag name='bookmark-manager'>Resume playing files (after closing player) from the last timestamp</flag>
 		<flag name='bs2b'>bs2b dsp support. Useful for headphones</flag>
+		<flag name='decast'>Subscription for the podcasts</flag>
 		<flag name='gnome-mmkeys'>Gnome multimedia keys support</flag>
 		<flag name='infobar'>Download and show lyrics</flag>
 		<flag name='jack'>Jack audio support</flag>
