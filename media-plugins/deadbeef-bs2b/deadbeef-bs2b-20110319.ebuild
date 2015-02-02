@@ -10,7 +10,7 @@ GITORIOUS_COMMIT="a1961cd2f0686a7bdf0915f1fc7d62b5aba369bd"
 
 DESCRIPTION="DeaDBeeF bs2b dsp plugin"
 HOMEPAGE="https://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}"
-SRC_URI="https://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}/archive/${GITORIOUS_COMMIT}.tar.gz"
+SRC_URI="https://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}/archive/${GITORIOUS_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 KEYWORDS="~*"
