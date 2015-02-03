@@ -121,20 +121,20 @@ DEPEND="${RDEPEND}
 		dev-util/intltool )"
 
 src_prepare() {
-        if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
-                epatch "${FILESDIR}/${PN}-remove-pt_br-help-translation.patch"
-                rm "${S}/translation/help.pt_BR.txt" || die
-        fi
-
-        if ! use_if_iuse linguas_ru && use_if_iuse linguas_pt_BR ; then
-                epatch "${FILESDIR}/${PN}-remove-ru-help-translation.patch"
-                rm "${S}/translation/help.ru.txt" || die
+	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
+		epatch "${FILESDIR}/${PN}-remove-pt_br-help-translation.patch"
+		rm "${S}/translation/help.pt_BR.txt" || die
 	fi
 
-        if ! use_if_iuse linguas_pt_BR && ! use_if_iuse linguas_ru ; then
-                epatch "${FILESDIR}/${PN}-remove-pt_br-and-ru-help-translation.patch"
-                rm "${S}/translation/help.pt_BR.txt" "${S}/translation/help.ru.txt" || die
-        fi
+	if ! use_if_iuse linguas_ru && use_if_iuse linguas_pt_BR ; then
+		epatch "${FILESDIR}/${PN}-remove-ru-help-translation.patch"
+		rm "${S}/translation/help.ru.txt" || die
+	fi
+
+	if ! use_if_iuse linguas_pt_BR && ! use_if_iuse linguas_ru ; then
+		epatch "${FILESDIR}/${PN}-remove-pt_br-and-ru-help-translation.patch"
+		rm "${S}/translation/help.pt_BR.txt" "${S}/translation/help.ru.txt" || die
+	fi
 
 	if use midi ; then
 		# set default gentoo path
@@ -144,7 +144,7 @@ src_prepare() {
 
 	if ! use unity ; then
 		# remove unity trash
-		epatch "${FILESDIR}/${PN}-0.6.2-or-higher-remove-unity-trash.patch"
+		epatch "${FILESDIR}/${PN}-0.6.3-remove-unity-trash.patch"
 	fi
 
 	config_rpath_update "${S}/config.rpath"

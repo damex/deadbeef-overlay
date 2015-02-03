@@ -144,7 +144,7 @@ src_prepare() {
 
 	if ! use unity ; then
 		# remove unity trash
-		epatch "${FILESDIR}/${PN}-0.6.2-or-higher-remove-unity-trash.patch"
+		epatch "${FILESDIR}/${P}-remove-unity-trash.patch"
 	fi
 
 	config_rpath_update "${S}/config.rpath" || die
