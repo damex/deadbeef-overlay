@@ -33,7 +33,7 @@
 		<flag name='midi'>midi support (via timidity) plugin</flag>
 		<flag name='mms'>Microsoft Media Server (MMS) plugin</flag>
 		<flag name='mono2stereo'>mono2stereo plugin</flag>
-		<flag name='mp3'>MPEG-1/2/2.5 Layer 3 (MP3) support plugin. It is a virtual use for mad/libmad or mpg123/libmpg123 starting from 0.6.3 version</flag>
+		<flag name='mp3'>MPEG-1/2/2.5 Layer 3 (MP3) support plugin. It is a virtual use for mad/libmad or mpg123/libmpg123 since deadbeef 0.6.3</flag>
 		<flag name='mpg123'>MPEG-1/2/2.5 Layer 3 (MP3) support through mpg123/libmpg123</flag>
 		<flag name='nls'>Native Language Support (NLS)</flag>
 		<flag name='nullout'>NULL output plugin</flag>
