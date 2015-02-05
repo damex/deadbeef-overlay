@@ -44,10 +44,11 @@ LICENSE="BSD
 	libsamplerate? ( GPL-2 )
 	m3u? ( ZLIB )
 	mac? ( GPL-2 )
+	mad? ( GPL-2 ZLIB )
 	midi? ( LGPL-2.1 ZLIB )
 	mms? ( GPL-2 ZLIB )
 	mono2stereo? ( ZLIB )
-	mp3? ( GPL-2 ZLIB )
+	mpg123? ( LGPL-2.1 ZLIB )
 	musepack? ( BSD ZLIB )
 	nullout? ( ZLIB )
 	oss? ( GPL-2 )
@@ -67,16 +68,17 @@ LICENSE="BSD
 
 SLOT="0"
 
-IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
+IUSE="+alsa +flac +gtk2 +hotkeys +mpg123 +m3u +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
-	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac midi mms mono2stereo musepack nls nullout
-	oss playlist-browser psf pulseaudio shell-exec shn sid tta unity vtx wavpack wma zip"
+	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac mad midi mms mono2stereo musepack nls
+	nullout oss playlist-browser psf pulseaudio shell-exec shn sid tta unity vtx wavpack wma zip"
 
 REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	cover-imlib2? ( cover )
 	cover-network? ( cover curl )
 	cover? ( || ( gtk2 gtk3 ) )
 	lastfm? ( curl )
+	mp3? ( || ( mad mpg123 ) )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
 	|| ( alsa oss pulseaudio nullout )"
 
@@ -105,8 +107,9 @@ RDEPEND="dev-libs/glib
 	libnotify? ( sys-apps/dbus )
 	libsamplerate? ( media-libs/libsamplerate )
 	mac? ( dev-lang/yasm )
+	mad? ( media-libs/libmad )
 	midi? ( media-sound/timidity-freepats )
-	mp3? ( media-libs/libmad )
+	mpg123? ( media-sound/mpg123 )
 	psf? ( sys-libs/zlib )
 	pulseaudio? ( media-sound/pulseaudio )
 	sndfile? ( media-libs/libsndfile )
@@ -189,10 +192,11 @@ src_configure() {
 		$(use_enable libsamplerate src) \
 		$(use_enable m3u) \
 		$(use_enable mac ffap) \
+		$(use_enable mad libmad) \
 		$(use_enable midi wildmidi) \
 		$(use_enable mms) \
 		$(use_enable mono2stereo) \
-		$(use_enable mp3 mad) \
+		$(use_enable mpg123 libmpg123) \
 		$(use_enable musepack) \
 		$(use_enable nls) \
 		$(use_enable nullout) \
