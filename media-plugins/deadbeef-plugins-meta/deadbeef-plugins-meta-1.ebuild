@@ -9,7 +9,7 @@ SRC_URI=""
 LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="*"
-IUSE="archive bookmark-manager bs2b filebrowser gnome-mmkeys infobar jack mpris musical-spectrum
+IUSE="archive bookmark-manager bs2b decast filebrowser gnome-mmkeys infobar jack mpris musical-spectrum
 	opus replaygain-control spectrogram stereo-widener vk vu-meter waveform-seekbar"
 
 PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
