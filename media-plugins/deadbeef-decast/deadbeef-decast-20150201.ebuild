@@ -6,12 +6,12 @@ DEADBEEF_GUI="yes"
 
 inherit deadbeef-plugins
 
-BITBUCKET_USERNAME="thesame"
 BITBUCKET_COMMIT="9ffd6d6dfb14"
 
 DESCRIPTION="DeaDBeeF podcast subscription plugin"
-HOMEPAGE="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN/deadbeef-/}/overview"
-SRC_URI="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN/deadbeef-/}/get/${BITBUCKET_COMMIT}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://bitbucket.org/thesame/decast"
+SRC_URI="https://bitbucket.org/thesame/decast/get/${BITBUCKET_COMMIT}.tar.gz \
+		-> ${P}.tar.gz"
 
 LICENSE="ZLIB"
 KEYWORDS="~*"
@@ -20,7 +20,7 @@ RDEPEND+=" dev-libs/libxml2"
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${BITBUCKET_USERNAME}-${PN/deadbeef-/}-${BITBUCKET_COMMIT}"
+S="${WORKDIR}/thesame-decast-${BITBUCKET_COMMIT}"
 
 src_compile() {
 	use gtk2 && GTKVER=2 emake

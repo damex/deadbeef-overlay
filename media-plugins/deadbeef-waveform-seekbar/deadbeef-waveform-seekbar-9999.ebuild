@@ -6,12 +6,9 @@ DEADBEEF_GUI="yes"
 
 inherit deadbeef-plugins git-r3
 
-GITHUB_USERNAME="cboxdoerfer"
-GITHUB_REPOSITORY="ddb_waveform_seekbar"
-
 DESCRIPTION="DeaDBeeF waveform seekbar plugin"
-HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}"
-EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}.git"
+HOMEPAGE="https://github.com/cboxdoerfer/ddb_waveform_seekbar"
+EGIT_REPO_URI="https://github.com/cboxdoerfer/ddb_waveform_seekbar.git"
 
 LICENSE="GPL-2"
 KEYWORDS=""

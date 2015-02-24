@@ -4,12 +4,9 @@ EAPI="5"
 
 inherit deadbeef-plugins git-r3
 
-GITORIOUS_PROJECT="deadbeef-sm-plugins"
-GITORIOUS_REPOSITORY="stereo-widener"
-
 DESCRIPTION="DeaDBeeF simple stereo widener plugin"
-HOMEPAGE="https://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}"
-EGIT_REPO_URI="git://gitorious.org/${GITORIOUS_PROJECT}/${GITORIOUS_REPOSITORY}.git"
+HOMEPAGE="https://gitorious.org/deadbeef-sm-plugins/stereo-widener"
+EGIT_REPO_URI="https://gitorious.org/deadbeef-sm-plugins/stereo-widener.git"
 
 LICENSE="MIT"
 KEYWORDS=""

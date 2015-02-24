@@ -7,10 +7,10 @@ inherit deadbeef-plugins git-r3
 BITBUCKET_USERNAME="Lithopsian"
 
 DESCRIPTION="DeaDBeeF ogg opus decoder plugin"
-HOMEPAGE="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN}/overview"
-EGIT_REPO_URI="https://bitbucket.org/${BITBUCKET_USERNAME}/${PN}.git"
+HOMEPAGE="https://bitbucket.org/Lithopsian/deadbeef-opus"
+EGIT_REPO_URI="https://bitbucket.org/Lithopsian/${PN}.git"
 
-RESTRICT="strip"
+RESTRICT+=" strip"
 
 LICENSE="GPL-2"
 KEYWORDS=""

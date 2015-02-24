@@ -4,12 +4,11 @@ EAPI="5"
 
 inherit deadbeef-plugins
 
-GITHUB_USERNAME="barthez"
 GITHUB_COMMIT="8e95cd380ba457fe6b666e5e704aa823d5eca1fa"
 
 DESCRIPTION="DeaDBeeF gnome (via dbus) multimedia keys plugin"
-HOMEPAGE="https://github.com/${GITHUB_USERNAME}/${PN}"
-SRC_URI="https://github.com/${GITHUB_USERNAME}/${PN}/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/barthez/deadbeef-gnome-mmkeys"
+SRC_URI="https://github.com/barthez/${PN}/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~*"

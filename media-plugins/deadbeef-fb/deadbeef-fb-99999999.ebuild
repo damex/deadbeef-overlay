@@ -10,7 +10,7 @@ EGIT_REPO_URI="git://git.code.sf.net/p/${PN}/code"
 EGIT_BRANCH="master"
 
 DESCRIPTION="DeaDBeeF filebrowser plugin"
-HOMEPAGE="http://sourceforge.net/projects/${PN}"
+HOMEPAGE="http://sourceforge.net/projects/deadbeef-fb"
 
 LICENSE="GPL-2"
 KEYWORDS=""
