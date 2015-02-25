@@ -6,22 +6,16 @@ DEADBEEF_GUI="yes"
 
 inherit autotools deadbeef-plugins git-r3
 
-EGIT_REPO_URI="git://git.code.sf.net/p/${PN}/code"
-EGIT_BRANCH="master"
-
-DESCRIPTION="DeaDBeeF filebrowser plugin"
-HOMEPAGE="http://sourceforge.net/projects/deadbeef-fb"
+DESCRIPTION="DeaDBeeF filebrowser plugin to resemble foobar2k music library"
+HOMEPAGE="https://github.com/JesseFarebro/deadbeef-librarybrowser"
+EGIT_REPO_URI="https://github.com/JesseFarebro/${PN}.git"
 
 LICENSE="GPL-2"
 KEYWORDS=""
 
-IUSE+=" debug"
-
-RDEPEND+=" !media-plugins/deadbeef-librarybrowser"
+RDEPEND+=" !media-plugins/deadbeef-fb"
 
 DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/deadbeef-fb-devel"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-avoid-version.patch"
@@ -31,7 +25,6 @@ src_prepare() {
 
 src_configure() {
 	econf --disable-static \
-		$(use_enable debug) \
 		$(use_enable gtk2) \
 		$(use_enable gtk3)
 }

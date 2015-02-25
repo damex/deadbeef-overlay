@@ -15,6 +15,10 @@ KEYWORDS="~*"
 
 IUSE+=" debug"
 
+RDEPEND+=" !media-plugins/deadbeef-librarybrowser"
+
+DEPEND="${RDEPEND}"
+
 S="${WORKDIR}/deadbeef-fb-devel"
 
 src_prepare() {

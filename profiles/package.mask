@@ -6,6 +6,7 @@
 =media-plugins/deadbeef-gnome-mmkeys-99999999
 =media-plugins/deadbeef-infobar-9999
 =media-plugins/deadbeef-jack-99999999
+=media-plugins/deadbeef-librarybrowser-99999999
 =media-plugins/deadbeef-mpris-99999999
 =media-plugins/deadbeef-musical-spectrum-99999999
 =media-plugins/deadbeef-opus-99999999

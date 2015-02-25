@@ -10,8 +10,8 @@ LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="*"
 IUSE="archive bookmark-manager bs2b decast filebrowser gnome-mmkeys infobar
-	jack mpris musical-spectrum opus replaygain-control spectrogram
-	stereo-widener vk vu-meter waveform-seekbar"
+	jack librarybrowser mpris musical-spectrum opus replaygain-control
+	spectrogram stereo-widener vk vu-meter waveform-seekbar"
 
 PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	bookmark-manager? ( media-plugins/deadbeef-bookmark-manager )
@@ -21,6 +21,7 @@ PDEPEND="archive? ( media-plugins/deadbeef-archive-reader )
 	gnome-mmkeys? ( media-plugins/deadbeef-gnome-mmkeys )
 	infobar? ( media-plugins/deadbeef-infobar )
 	jack? ( media-plugins/deadbeef-jack )
+	librarybrowser ( media-plugins/deadbeef-librarybrowser )
 	mpris? ( media-plugins/deadbeef-mpris )
 	musical-spectrum? ( media-plugins/deadbeef-musical-spectrum )
 	opus? ( media-plugins/deadbeef-opus )
