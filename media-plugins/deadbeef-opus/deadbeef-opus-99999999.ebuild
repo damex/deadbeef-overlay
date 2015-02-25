@@ -4,8 +4,6 @@ EAPI="5"
 
 inherit deadbeef-plugins git-r3
 
-BITBUCKET_USERNAME="Lithopsian"
-
 DESCRIPTION="DeaDBeeF ogg opus decoder plugin"
 HOMEPAGE="https://bitbucket.org/Lithopsian/deadbeef-opus"
 EGIT_REPO_URI="https://bitbucket.org/Lithopsian/${PN}.git"

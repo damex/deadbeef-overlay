@@ -4,8 +4,6 @@ EAPI="5"
 
 inherit deadbeef-plugins
 
-BITBUCKET_USERNAME="Lithopsian"
-
 DESCRIPTION="DeaDBeeF ogg opus decoder plugin"
 HOMEPAGE="https://bitbucket.org/Lithopsian/deadbeef-opus"
 SRC_URI="https://bitbucket.org/Lithopsian/${PN}/downloads/opus-${PV}.tar.gz -> ${P}.tar.gz"
