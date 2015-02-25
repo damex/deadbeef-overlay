@@ -8,7 +8,7 @@ inherit autotools deadbeef-plugins
 
 GITHUB_COMMIT="68e1a92339be65cbeda09304e74f1744ff1c127d"
 
-DESCRIPTION="DeaDBeeF filebrowser plugin to resemble foobar2k music library"
+DESCRIPTION="DeaDBeeF filebrowser plugin that resemble foobar2k music library"
 HOMEPAGE="https://github.com/JesseFarebro/deadbeef-librarybrowser"
 SRC_URI="https://github.com/JesseFarebro/${PN}/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 

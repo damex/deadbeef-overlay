@@ -6,7 +6,7 @@ DEADBEEF_GUI="yes"
 
 inherit autotools deadbeef-plugins git-r3
 
-DESCRIPTION="DeaDBeeF filebrowser plugin to resemble foobar2k music library"
+DESCRIPTION="DeaDBeeF filebrowser plugin that resemble foobar2k music library"
 HOMEPAGE="https://github.com/JesseFarebro/deadbeef-librarybrowser"
 EGIT_REPO_URI="https://github.com/JesseFarebro/${PN}.git"
 
