@@ -10,4 +10,3 @@ Layman users can add `funtoo-deadbeef` overlay using the following command:
 You can report bugs at:
  
 * https://github.com/damex/funtoo-deadbeef/issues
-* #funtoo@irc.freenode.net
