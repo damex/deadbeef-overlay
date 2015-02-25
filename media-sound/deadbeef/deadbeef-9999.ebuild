@@ -9,9 +9,7 @@ PLOCALE_BACKUP="en_GB"
 
 inherit autotools eutils fdo-mime git-r3 gnome2-utils l10n
 
-GITHUB_USERNAME="Alexey-Yakovenko"
-
-EGIT_REPO_URI="https://github.com/${GITHUB_USERNAME}/${PN}.git"
+EGIT_REPO_URI="https://github.com/Alexey-Yakovenko/${PN}.git"
 EGIT_BRANCH="master"
 
 KEYWORDS=""
