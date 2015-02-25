@@ -17,6 +17,7 @@
 		<flag name='librarybrowser'>File browser plugin that resemble foobar2k music library</flag>
 		<flag name='mpris'>MPRIS support</flag>
 		<flag name='musical-spectrum'>Draws musical spectrum for current track</flag>
+		<flag name='opus'>Ogg opus decoder support</flag>
 		<flag name='replaygain-control'>Advanced control of replaygain</flag>
 		<flag name='spectrogram'>Draws spectrogram for current track</flag>
 		<flag name='stereo-widener'>Widens stereo</flag>
