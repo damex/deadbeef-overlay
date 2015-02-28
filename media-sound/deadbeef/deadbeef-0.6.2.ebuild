@@ -104,7 +104,7 @@ RDEPEND="dev-libs/glib
 	hotkeys? ( x11-libs/libX11 )
 	libnotify? ( sys-apps/dbus )
 	libsamplerate? ( media-libs/libsamplerate )
-	mac? ( dev-lang/yasm )
+	mac? ( !arm? ( dev-lang/yasm ) )
 	midi? ( media-sound/timidity-freepats )
 	mp3? ( media-libs/libmad )
 	psf? ( sys-libs/zlib )
