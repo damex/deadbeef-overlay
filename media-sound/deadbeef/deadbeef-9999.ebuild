@@ -190,6 +190,7 @@ src_configure() {
 		$(use_enable gtk3) \
 		$(use_enable hotkeys) \
 		$(use_enable lastfm lfm) \
+		$(use_enable libav ffmpeg) \
 		$(use_enable libnotify notify) \
 		$(use_enable libsamplerate src) \
 		$(use_enable m3u) \
