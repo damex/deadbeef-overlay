@@ -25,6 +25,7 @@
 		<flag name='gtk3'>GTK3 based user interface</flag>
 		<flag name='hotkeys'>Hotkeys support plugin</flag>
 		<flag name='lastfm'>Last.fm scrobbling plugin</flag>
+		<flag name='libav'>Libav plugin</flag>
 		<flag name='libnotify'>Notification daemon support plugin</flag>
 		<flag name='libsamplerate'>Sample rate conversion plugin</flag>
 		<flag name='m3u'>m3u playlist plugin</flag>
