@@ -68,13 +68,14 @@ SLOT="0"
 
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
-	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac midi mms mono2stereo musepack nls nullout
+	ffmpeg gme gtk3 lastfm libav libnotify libsamplerate mac midi mms mono2stereo musepack nls nullout
 	oss playlist-browser psf pulseaudio shell-exec shn sid tta unity vtx wavpack wma zip"
 
 REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	cover-imlib2? ( cover )
 	cover-network? ( cover curl )
 	cover? ( || ( gtk2 gtk3 ) )
+	ffmpeg? ( !libav )
 	lastfm? ( curl )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
 	|| ( alsa oss pulseaudio nullout )"
@@ -92,7 +93,8 @@ RDEPEND="dev-libs/glib
 		virtual/jpeg
 		x11-libs/gdk-pixbuf[jpeg] )
 	curl? ( net-misc/curl )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( media-video/ffmpeg:0= )
+	libav? ( media-video/libav:0= )
 	flac? ( media-libs/libogg
 		media-libs/flac )
 	gme? ( sys-libs/zlib )

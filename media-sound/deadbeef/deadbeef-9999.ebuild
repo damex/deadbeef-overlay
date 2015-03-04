@@ -75,6 +75,7 @@ REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	cover-imlib2? ( cover )
 	cover-network? ( cover curl )
 	cover? ( || ( gtk2 gtk3 ) )
+	ffmpeg? ( !libav )
 	lastfm? ( curl )
 	mp3? ( || ( mad mpg123 ) )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
@@ -93,7 +94,8 @@ RDEPEND="dev-libs/glib
 		virtual/jpeg
 		x11-libs/gdk-pixbuf[jpeg] )
 	curl? ( net-misc/curl )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( media-video/ffmpeg:0= )
+	libav? ( media-video/libav:0= )
 	flac? ( media-libs/flac )
 	gme? ( sys-libs/zlib )
 	gtk2? ( dev-libs/atk
