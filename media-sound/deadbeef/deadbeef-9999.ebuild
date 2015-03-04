@@ -38,6 +38,7 @@ LICENSE="BSD
 	gtk3? ( GPL-2 )
 	hotkeys? ( ZLIB )
 	lastfm? ( GPL-2 )
+	libav? ( GPL-2 )
 	libnotify? ( GPL-2 )
 	libsamplerate? ( GPL-2 )
 	m3u? ( ZLIB )
