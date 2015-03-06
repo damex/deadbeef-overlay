@@ -21,8 +21,6 @@ RDEPEND+=" !media-plugins/deadbeef-librarybrowser"
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/deadbeef-fb-devel"
-
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-avoid-version.patch"
 
