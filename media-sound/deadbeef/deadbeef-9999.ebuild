@@ -69,8 +69,8 @@ SLOT="0"
 
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mad +mp3 +sndfile +vorbis
 	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
-	ffmpeg gme gtk3 lastfm libnotify libsamplerate mac midi mms mono2stereo mpg123 musepack nls
-	nullout oss playlist-browser psf pulseaudio shell-exec shn sid tta unity vtx wavpack wma zip"
+	ffmpeg gme gtk3 lastfm libav libnotify libsamplerate mac midi mms mono2stereo mpg123 musepack nls
+	nullout oss playlist-browser psf pulseaudio sc68 shell-exec shn sid tta unity vtx wavpack wma zip"
 
 REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	cover-imlib2? ( cover )
@@ -100,10 +100,12 @@ RDEPEND="dev-libs/glib
 	flac? ( media-libs/flac )
 	gme? ( sys-libs/zlib )
 	gtk2? ( dev-libs/atk
+		dev-libs/jansson:0
 		x11-libs/cairo
 		x11-libs/gtk+:2
 		x11-libs/pango )
-	gtk3? ( x11-libs/gtk+:3 )
+	gtk3? ( dev-libs/jansson:0
+		x11-libs/gtk+:3 )
 	hotkeys? ( x11-libs/libX11 )
 	libnotify? ( sys-apps/dbus )
 	libsamplerate? ( media-libs/libsamplerate )
@@ -207,6 +209,7 @@ src_configure() {
 		$(use_enable playlist-browser pltbrowser) \
 		$(use_enable psf) \
 		$(use_enable pulseaudio pulse) \
+		$(use_enable sc68) \
 		$(use_enable shell-exec shellexec) \
 		$(use_enable shn) \
 		$(use_enable sid) \
