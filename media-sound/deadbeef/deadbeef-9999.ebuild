@@ -94,7 +94,7 @@ RDEPEND="dev-libs/glib:2
 	cover? ( cover-imlib2? ( media-libs/imlib2:0 )
 		media-libs/libpng:0=
 		virtual/jpeg:0
-		x11-libs/gdk-pixbuf[jpeg]:2 )
+		x11-libs/gdk-pixbuf:2[jpeg] )
 	curl? ( net-misc/curl:0 )
 	ffmpeg? ( media-video/ffmpeg:0= )
 	libav? ( media-video/libav:0= )
