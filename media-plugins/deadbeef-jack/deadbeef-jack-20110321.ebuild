@@ -13,7 +13,7 @@ SRC_URI="https://gitorious.org/deadbeef-sm-plugins/jack/archive/${GITORIOUS_COMM
 LICENSE="MIT"
 KEYWORDS="~*"
 
-RDEPEND+=" media-sound/jack-audio-connection-kit"
+RDEPEND+=" media-sound/jack-audio-connection-kit:0"
 
 DEPEND="${RDEPEND}"
 

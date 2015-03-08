@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/cboxdoerfer/ddb_spectrogram.git"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-RDEPEND+=" sci-libs/fftw:3.0"
+RDEPEND+=" sci-libs/fftw:3.0="
 
 DEPEND="${RDEPEND}"
 

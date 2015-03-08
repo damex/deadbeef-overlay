@@ -13,9 +13,9 @@ SRC_URI="https://bitbucket.org/dsimbiriatin/${PN}/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
-RDEPEND+=" dev-libs/libxml2
-	x11-libs/gdk-pixbuf[jpeg]
-	media-sound/deadbeef[curl]"
+RDEPEND+=" dev-libs/libxml2:2
+	x11-libs/gdk-pixbuf[jpeg]:2
+	media-sound/deadbeef[curl]:0"
 
 DEPEND="${RDEPEND}"
 

@@ -13,7 +13,7 @@ SRC_URI="https://gitorious.org/deadbeef-sm-plugins/bs2b/archive/${GITORIOUS_COMM
 LICENSE="MIT"
 KEYWORDS="~*"
 
-RDEPEND+=" media-libs/libbs2b"
+RDEPEND+=" media-libs/libbs2b:0"
 
 DEPEND="${RDEPEND}"
 

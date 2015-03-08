@@ -17,7 +17,7 @@ KEYWORDS=""
 
 IUSE+=" debug"
 
-RDEPEND+=" !media-plugins/deadbeef-librarybrowser"
+RDEPEND+=" !media-plugins/deadbeef-librarybrowser:0"
 
 DEPEND="${RDEPEND}"
 

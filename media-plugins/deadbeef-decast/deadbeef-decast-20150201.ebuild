@@ -16,7 +16,7 @@ SRC_URI="https://bitbucket.org/thesame/decast/get/${BITBUCKET_COMMIT}.tar.gz \
 LICENSE="ZLIB"
 KEYWORDS="~*"
 
-RDEPEND+=" dev-libs/libxml2"
+RDEPEND+=" dev-libs/libxml2:2"
 
 DEPEND="${RDEPEND}"
 

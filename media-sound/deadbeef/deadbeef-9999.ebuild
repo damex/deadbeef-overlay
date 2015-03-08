@@ -85,47 +85,48 @@ REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 PDEPEND="media-plugins/deadbeef-plugins-meta"
 
 RDEPEND="dev-libs/glib
-	aac? ( media-libs/faad2 )
-	adplug? ( media-libs/adplug )
-	alsa? ( media-libs/alsa-lib )
-	alac? ( media-libs/faad2 )
-	cdda? ( dev-libs/libcdio media-libs/libcddb )
-	cover? ( cover-imlib2? ( media-libs/imlib2 )
-		media-libs/libpng
-		virtual/jpeg
-		x11-libs/gdk-pixbuf[jpeg] )
-	curl? ( net-misc/curl )
+	aac? ( media-libs/faad2:0 )
+	adplug? ( media-libs/adplug:0 )
+	alsa? ( media-libs/alsa-lib:0 )
+	alac? ( media-libs/faad2:0 )
+	cdda? ( dev-libs/libcdio:0=
+		media-libs/libcddb:0 )
+	cover? ( cover-imlib2? ( media-libs/imlib2:0 )
+		media-libs/libpng:0=
+		virtual/jpeg:0
+		x11-libs/gdk-pixbuf[jpeg]:2 )
+	curl? ( net-misc/curl:0 )
 	ffmpeg? ( media-video/ffmpeg:0= )
 	libav? ( media-video/libav:0= )
-	flac? ( media-libs/flac )
-	gme? ( sys-libs/zlib )
-	gtk2? ( dev-libs/atk
+	flac? ( media-libs/flac:0 )
+	gme? ( sys-libs/zlib:0 )
+	gtk2? ( dev-libs/atk:0
 		dev-libs/jansson:0
-		x11-libs/cairo
+		x11-libs/cairo:0
 		x11-libs/gtk+:2
-		x11-libs/pango )
+		x11-libs/pango:0 )
 	gtk3? ( dev-libs/jansson:0
 		x11-libs/gtk+:3 )
-	hotkeys? ( x11-libs/libX11 )
-	libnotify? ( sys-apps/dbus )
-	libsamplerate? ( media-libs/libsamplerate )
-	mac? ( x86? ( dev-lang/yasm )
-		amd64? ( dev-lang/yasm ) )
-	mad? ( media-libs/libmad )
-	midi? ( media-sound/timidity-freepats )
-	mpg123? ( media-sound/mpg123 )
-	psf? ( sys-libs/zlib )
-	pulseaudio? ( media-sound/pulseaudio )
-	sndfile? ( media-libs/libsndfile )
-	vorbis? ( media-libs/libogg
-		media-libs/libvorbis )
-	wavpack? ( media-sound/wavpack )
-	zip? ( dev-libs/libzip )"
+	hotkeys? ( x11-libs/libX11:0 )
+	libnotify? ( sys-apps/dbus:0 )
+	libsamplerate? ( media-libs/libsamplerate:0 )
+	mac? ( x86? ( dev-lang/yasm:0 )
+		amd64? ( dev-lang/yasm:0 ) )
+	mad? ( media-libs/libmad:0 )
+	midi? ( media-sound/timidity-freepats:0 )
+	mpg123? ( media-sound/mpg123:0 )
+	psf? ( sys-libs/zlib:0 )
+	pulseaudio? ( media-sound/pulseaudio:0 )
+	sndfile? ( media-libs/libsndfile:0 )
+	vorbis? ( media-libs/libogg:0
+		media-libs/libvorbis:0 )
+	wavpack? ( media-sound/wavpack:0 )
+	zip? ( dev-libs/libzip:0 )"
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	nls? ( virtual/libintl
-		dev-util/intltool )"
+	virtual/pkgconfig:0
+	nls? ( dev-util/intltool:0
+		virtual/libintl:0 )"
 
 src_prepare() {
 	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then

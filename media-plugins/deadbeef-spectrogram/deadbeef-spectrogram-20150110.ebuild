@@ -15,7 +15,7 @@ SRC_URI="https://github.com/cboxdoerfer/ddb_spectrogram/archive/${GITHUB_COMMIT}
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
-RDEPEND+=" sci-libs/fftw:3.0"
+RDEPEND+=" sci-libs/fftw:3.0="
 
 DEPEND="${RDEPEND}"
 

@@ -13,7 +13,7 @@ SRC_URI="https://github.com/barthez/${PN}/archive/${GITHUB_COMMIT}.tar.gz -> ${P
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
-RDEPEND+=" sys-apps/dbus"
+RDEPEND+=" sys-apps/dbus:0"
 
 S="${WORKDIR}/${PN}-${GITHUB_COMMIT}"
 

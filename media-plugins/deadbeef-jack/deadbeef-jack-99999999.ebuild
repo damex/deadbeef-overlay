@@ -11,7 +11,7 @@ EGIT_REPO_URI="https://gitorious.org/deadbeef-sm-plugins/jack.git"
 LICENSE="MIT"
 KEYWORDS=""
 
-RDEPEND="media-sound/jack-audio-connection-kit"
+RDEPEND="media-sound/jack-audio-connection-kit:0"
 
 DEPEND="${RDEPEND}"
 

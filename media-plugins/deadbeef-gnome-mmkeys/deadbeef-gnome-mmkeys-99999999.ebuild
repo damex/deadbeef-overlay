@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/barthez/${PN}.git"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-RDEPEND+=" sys-apps/dbus"
+RDEPEND+=" sys-apps/dbus:0"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}.patch"

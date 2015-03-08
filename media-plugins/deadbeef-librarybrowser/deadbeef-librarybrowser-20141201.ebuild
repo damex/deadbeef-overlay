@@ -15,7 +15,7 @@ SRC_URI="https://github.com/JesseFarebro/${PN}/archive/${GITHUB_COMMIT}.tar.gz -
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
-RDEPEND+=" !media-plugins/deadbeef-fb"
+RDEPEND+=" !media-plugins/deadbeef-fb:0"
 
 DEPEND="${RDEPEND}"
 

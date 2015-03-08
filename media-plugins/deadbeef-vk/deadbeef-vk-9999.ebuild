@@ -13,8 +13,8 @@ EGIT_REPO_URI="https://github.com/scorpp/db-vk.git"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-RDEPEND+=" dev-libs/json-glib
-	media-sound/deadbeef[curl]"
+RDEPEND+=" dev-libs/json-glib:0
+	media-sound/deadbeef[curl]:0"
 
 DEPEND="${RDEPEND}"
 

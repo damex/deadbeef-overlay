@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/JesseFarebro/${PN}.git"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-RDEPEND+=" !media-plugins/deadbeef-fb"
+RDEPEND+=" !media-plugins/deadbeef-fb:0"
 
 DEPEND="${RDEPEND}"
 

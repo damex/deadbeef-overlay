@@ -13,8 +13,8 @@ RESTRICT+=" strip"
 LICENSE="GPL-2"
 KEYWORDS="~*"
 
-RDEPEND+=" >=media-libs/opusfile-0.5[float,http]
-	media-libs/libogg"
+RDEPEND+=" >=media-libs/opusfile-0.5[float,http]:0
+	media-libs/libogg:0"
 
 DEPEND="${RDEPEND}"
 

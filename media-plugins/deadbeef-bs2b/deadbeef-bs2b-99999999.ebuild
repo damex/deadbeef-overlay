@@ -11,7 +11,7 @@ EGIT_REPO_URI="https://gitorious.org/deadbeef-sm-plugins/bs2b.git"
 LICENSE="MIT"
 KEYWORDS=""
 
-RDEPEND+=" media-libs/libbs2b"
+RDEPEND+=" media-libs/libbs2b:0"
 
 DEPEND="${RDEPEND}"
 
