@@ -81,7 +81,7 @@ REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
 	|| ( alsa oss pulseaudio nullout )"
 
-PDEPEND="media-plugins/deadbeef-plugins-meta"
+PDEPEND="media-plugins/deadbeef-plugins-meta:0"
 
 RDEPEND="dev-libs/glib:2
 	aac? ( media-libs/faad2:0 )
