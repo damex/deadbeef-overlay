@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~*"
 
 RDEPEND+=" dev-libs/json-glib:0
-	media-sound/deadbeef[curl]:0"
+	media-sound/deadbeef:0[curl]"
 
 DEPEND="${RDEPEND}"
 

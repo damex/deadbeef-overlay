@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS=""
 
 RDEPEND+=" dev-libs/libxml2:2
-	x11-libs/gdk-pixbuf[jpeg]:2
-	media-sound/deadbeef[curl]:0"
+	x11-libs/gdk-pixbuf:2[jpeg]
+	media-sound/deadbeef:0[curl]"
 
 DEPEND="${RDEPEND}"
 
