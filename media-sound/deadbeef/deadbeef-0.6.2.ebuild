@@ -83,7 +83,7 @@ REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 
 PDEPEND="media-plugins/deadbeef-plugins-meta"
 
-RDEPEND="dev-libs/glib
+RDEPEND="dev-libs/glib:2
 	aac? ( media-libs/faad2:0 )
 	adplug? ( media-libs/adplug:0 )
 	alsa? ( media-libs/alsa-lib:0 )
