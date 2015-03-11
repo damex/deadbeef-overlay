@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/damex/funtoo-deadbeef.svg)](https://travis-ci.org/damex/funtoo-deadbeef)
+[![Build Status](https://travis-ci.org/damex/funtoo-deadbeef.svg?branch=master)](https://travis-ci.org/damex/funtoo-deadbeef)
 
 funtoo-deadbeef
 ===============
