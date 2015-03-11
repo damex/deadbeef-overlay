@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/damex/funtoo-deadbeef.svg)](https://travis-ci.org/damex/funtoo-deadbeef)
+
 funtoo-deadbeef
 ===============
  
