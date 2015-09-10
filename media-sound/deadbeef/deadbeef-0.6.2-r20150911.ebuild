@@ -7,12 +7,12 @@ PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja k
 
 PLOCALE_BACKUP="en_GB"
 
-inherit autotools eutils fdo-mime git-r3 gnome2-utils l10n
+inherit autotools eutils fdo-mime gnome2-utils l10n
 
-EGIT_REPO_URI="https://github.com/Alexey-Yakovenko/${PN}.git"
-EGIT_BRANCH="master"
+GITHUB_COMMIT="e9e3a164e1d591f3b85ab4e0970881ce85ba9d3f"
+SRC_URI="https://github.com/Alexey-Yakovenko/deadbeef/archive/${GITHUB_COMMIT}.tar.gz -> ${PN}-${PVR}.tar.gz"
 
-KEYWORDS=""
+KEYWORDS="~*"
 
 DESCRIPTION="foobar2k-like music player"
 HOMEPAGE="http://deadbeef.sourceforge.net"
@@ -127,6 +127,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig:0
 	nls? ( dev-util/intltool:0
 		virtual/libintl:0 )"
+
+S="${WORKDIR}/${PN}-${GITHUB_COMMIT}"
 
 src_prepare() {
 	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
