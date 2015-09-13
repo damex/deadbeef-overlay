@@ -83,6 +83,7 @@ REQUIRED_USE="cdparanoia? ( cdda )
 	lastfm? ( curl )
 	mp3? ( || ( mad mpg123 ) )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
+	shell-exec? ( || ( gtk2 gtk3 ) )
 	|| ( alsa oss pulseaudio nullout )"
 
 PDEPEND="media-plugins/deadbeef-plugins-meta:0"
@@ -166,19 +167,10 @@ src_prepare() {
 }
 
 src_configure() {
-	if use shell-exec ; then
-		if use gtk2 || use gtk3 ; then
-			shell-exec-ui="--enable-shellexec-ui"
-		else
-			shell-exec-ui="--disable-shellexec-ui"
-		fi
-	fi
-
 	econf --disable-coreaudio \
 		--disable-portable \
 		--disable-static \
 		--docdir=/usr/share/${PN} \
-		${shell-exec-ui} \
 		$(use_enable aac) \
 		$(use_enable adplug) \
 		$(use_enable alac) \
@@ -218,7 +210,7 @@ src_configure() {
 		$(use_enable psf) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable sc68) \
-		$(use_enable shell-exec shellexec) \
+		$(use_enable shell-exec shellexecui) \
 		$(use_enable shn) \
 		$(use_enable sid) \
 		$(use_enable sndfile) \
