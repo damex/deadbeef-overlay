@@ -25,6 +25,7 @@ LICENSE="BSD
 	alac? ( MIT GPL-2 )
 	alsa? ( GPL-2 )
 	cdda? ( GPL-2 LGPL-2 GPL-3 )
+	cdparanoia ( GPL-2 )
 	cover? ( ZLIB )
 	converter? ( GPL-2 )
 	curl? ( curl ZLIB )
@@ -68,12 +69,13 @@ LICENSE="BSD
 SLOT="0"
 
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mad +mp3 +sndfile +vorbis
-	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
+	aac adplug alac cdda cdparanoia converter cover cover-imlib2 cover-network curl dts dumb equalizer
 	ffmpeg gme gtk3 lastfm libav libnotify libsamplerate mac midi mms mono2stereo mpg123 musepack nls
 	nullout oss playlist-browser psf pulseaudio sc68 shell-exec shn sid tta unity vtx wavpack wma zip"
 
 # FL-2796: enabling cover without cover-network makes build fail. review that change in the future.
-REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
+REQUIRED_USE="cdparanoia? ( cdda )
+	converter? ( || ( gtk2 gtk3 ) )
 	cover-imlib2? ( cover )
 	cover-network? ( cover curl )
 	cover? ( || ( gtk2 gtk3 ) cover-network )
@@ -92,6 +94,7 @@ RDEPEND="dev-libs/glib:2
 	alac? ( media-libs/faad2:0 )
 	cdda? ( dev-libs/libcdio:0=
 		media-libs/libcddb:0 )
+	cdparanoia? ( dev-libs/libcdio-paranoia:0 )
 	cover? ( cover-imlib2? ( media-libs/imlib2:0 )
 		media-libs/libpng:0=
 		virtual/jpeg:0
@@ -181,6 +184,7 @@ src_configure() {
 		$(use_enable alac) \
 		$(use_enable alsa) \
 		$(use_enable cdda) \
+		$(use_enable cdparanoia cdda-paranoia) \
 		$(use_enable converter) \
 		$(use_enable cover artwork) \
 		$(use_enable cover-imlib2 artwork-imlib2) \
