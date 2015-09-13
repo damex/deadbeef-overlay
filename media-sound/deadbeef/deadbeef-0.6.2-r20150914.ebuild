@@ -9,7 +9,7 @@ PLOCALE_BACKUP="en_GB"
 
 inherit autotools eutils fdo-mime gnome2-utils l10n
 
-GITHUB_COMMIT="071d3795f6ee2ebc8b8b9a26c167afc267cbb320"
+GITHUB_COMMIT="e460aa17fb559fb33b100da5390f9e22720574fb"
 SRC_URI="https://github.com/Alexey-Yakovenko/deadbeef/archive/${GITHUB_COMMIT}.tar.gz -> ${PN}-${PVR}.tar.gz"
 
 KEYWORDS="~*"
@@ -157,8 +157,6 @@ src_prepare() {
 		# remove unity trash
 		epatch "${FILESDIR}/${PN}-0.6.3-remove-unity-trash.patch"
 	fi
-
-	epatch "${FILESDIR}/${PN}-${PVR}-track-number.patch"
 
 	config_rpath_update "${S}/config.rpath"
 	eautoreconf
