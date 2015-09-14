@@ -10,7 +10,7 @@ PLOCALE_BACKUP="en_GB"
 inherit autotools eutils fdo-mime gnome2-utils l10n
 
 GITHUB_COMMIT="e460aa17fb559fb33b100da5390f9e22720574fb"
-SRC_URI="https://github.com/Alexey-Yakovenko/deadbeef/archive/${GITHUB_COMMIT}.tar.gz -> ${PN}-${PVR}.tar.gz"
+SRC_URI="https://github.com/Alexey-Yakovenko/deadbeef/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~*"
 
