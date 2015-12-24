@@ -1,12 +1,12 @@
-funtoo-deadbeef
+deadbeef-overlay
 ===============
 
-The `funtoo-deadbeef` overlay is designed to be used with `Funtoo Linux`, however, ebuilds from this overlay can be used on any modern Gentoo Linux based derivative.
+The `deadbeef-overlay` overlay is designed to be used with `Gentoo Linux`, however, ebuilds from this overlay can be used on any modern Gentoo Linux based derivative.
 
-Layman users can add `funtoo-deadbeef` overlay using the following command:
+Layman users can add `deadbeef-overlay` overlay using the following command:
 
-`layman -a funtoo-deadbeef`
+`layman -a deadbeef-overlay`
 
 You can report bugs at:
 
-* https://github.com/damex/funtoo-deadbeef/issues
+* https://github.com/damex/deadbeef-overlay/issues
