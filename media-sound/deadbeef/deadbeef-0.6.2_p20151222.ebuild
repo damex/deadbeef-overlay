@@ -73,12 +73,11 @@ IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mad +mp3 +sndfile +vorbis
 	ffmpeg gme gtk3 lastfm libav libnotify libsamplerate mac midi mms mono2stereo mpg123 musepack nls
 	nullout oss playlist-browser psf pulseaudio sc68 shell-exec shn sid tta unity vtx wavpack wma zip"
 
-# FL-2796: enabling cover without cover-network makes build fail. review that change in the future.
 REQUIRED_USE="cdparanoia? ( cdda )
 	converter? ( || ( gtk2 gtk3 ) )
 	cover-imlib2? ( cover )
 	cover-network? ( cover curl )
-	cover? ( || ( gtk2 gtk3 ) cover-network )
+	cover? ( || ( gtk2 gtk3 ) )
 	ffmpeg? ( !libav )
 	lastfm? ( curl )
 	mp3? ( || ( mad mpg123 ) )
