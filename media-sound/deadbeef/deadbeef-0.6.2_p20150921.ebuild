@@ -12,7 +12,7 @@ inherit autotools eutils fdo-mime gnome2-utils l10n
 GITHUB_COMMIT="c43f4189849b1e94040abc63b3e2b1f27afbde91"
 SRC_URI="https://github.com/Alexey-Yakovenko/deadbeef/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="foobar2k-like music player"
 HOMEPAGE="http://deadbeef.sourceforge.net"
