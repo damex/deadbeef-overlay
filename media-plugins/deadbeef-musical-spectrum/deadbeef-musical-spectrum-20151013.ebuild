@@ -6,7 +6,7 @@ DEADBEEF_GUI="yes"
 
 inherit deadbeef-plugins
 
-GITHUB_COMMIT="ce0f4daaf295186d9d89787870997bbd8e93c674"
+GITHUB_COMMIT="353870a66adae81d138a34ea5ebb8ab876b05b40"
 
 DESCRIPTION="DeaDBeeF musical spectrum plugin"
 HOMEPAGE="https://github.com/cboxdoerfer/ddb_musical_spectrum"
