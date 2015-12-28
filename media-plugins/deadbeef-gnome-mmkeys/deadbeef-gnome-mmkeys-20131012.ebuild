@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/barthez/deadbeef-gnome-mmkeys"
 SRC_URI="https://github.com/barthez/${PN}/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND+=" sys-apps/dbus:0"
 

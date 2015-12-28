@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/cboxdoerfer/ddb_replaygain_control"
 SRC_URI="https://github.com/cboxdoerfer/ddb_replaygain_control/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/ddb_replaygain_control-${GITHUB_COMMIT}"
 

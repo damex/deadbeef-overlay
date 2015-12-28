@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/cboxdoerfer/ddb_spectrogram"
 SRC_URI="https://github.com/cboxdoerfer/ddb_spectrogram/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND+=" sci-libs/fftw:3.0="
 

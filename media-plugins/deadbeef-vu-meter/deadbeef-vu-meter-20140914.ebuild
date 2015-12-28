@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/cboxdoerfer/ddb_vu_meter"
 SRC_URI="https://github.com/cboxdoerfer/ddb_vu_meter/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/ddb_vu_meter-${GITHUB_COMMIT}"
 

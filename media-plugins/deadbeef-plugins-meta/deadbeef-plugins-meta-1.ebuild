@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="metapackage"
 SLOT="0"
-KEYWORDS="*"
+KEYWORDS="amd64 x86"
 IUSE="archive bookmark-manager bs2b decast filebrowser gnome-mmkeys infobar
 	jack librarybrowser mpris musical-spectrum opus replaygain-control
 	spectrogram stereo-widener vk vu-meter waveform-seekbar"

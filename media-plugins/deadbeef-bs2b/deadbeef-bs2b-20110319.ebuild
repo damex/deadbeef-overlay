@@ -11,7 +11,7 @@ HOMEPAGE="https://gitorious.org/deadbeef-sm-plugins/bs2b"
 SRC_URI="https://gitorious.org/deadbeef-sm-plugins/bs2b/archive/${GITORIOUS_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND+=" media-libs/libbs2b:0"
 

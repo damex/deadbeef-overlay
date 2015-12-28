@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/scorpp/db-vk"
 SRC_URI="https://github.com/scorpp/db-vk/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND+=" dev-libs/json-glib:0
 	media-sound/deadbeef:0[curl]"

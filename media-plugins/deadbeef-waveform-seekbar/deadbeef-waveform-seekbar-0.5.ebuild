@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/cboxdoerfer/ddb_waveform_seekbar"
 SRC_URI="https://github.com/cboxdoerfer/ddb_waveform_seekbar/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND+=" dev-db/sqlite:3"
 

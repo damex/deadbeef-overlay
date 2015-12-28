@@ -11,6 +11,6 @@ HOMEPAGE="https://github.com/cboxdoerfer/ddb_bookmark_manager"
 SRC_URI="https://github.com/cboxdoerfer/ddb_bookmark_manager/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/ddb_bookmark_manager-${GITHUB_COMMIT}"

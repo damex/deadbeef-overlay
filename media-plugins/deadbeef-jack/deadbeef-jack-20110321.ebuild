@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/Alexey-Yakovenko/jack"
 SRC_URI="https://github.com/Alexey-Yakovenko/jack/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND+=" media-sound/jack-audio-connection-kit:0"
 

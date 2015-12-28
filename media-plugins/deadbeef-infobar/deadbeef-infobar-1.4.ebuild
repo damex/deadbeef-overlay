@@ -11,7 +11,7 @@ HOMEPAGE="https://bitbucket.org/dsimbiriatin/deadbeef-infobar"
 SRC_URI="https://bitbucket.org/dsimbiriatin/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND+=" dev-libs/libxml2:2
 	x11-libs/gdk-pixbuf:2[jpeg]

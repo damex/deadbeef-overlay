@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/Alexey-Yakovenko/stereo-widener"
 SRC_URI="https://github.com/Alexey-Yakovenko/stereo-widener/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/stereo-widener-${GITHUB_COMMIT}"
 

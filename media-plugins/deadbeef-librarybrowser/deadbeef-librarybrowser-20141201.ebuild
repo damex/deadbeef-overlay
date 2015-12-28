@@ -13,7 +13,7 @@ HOMEPAGE="https://github.com/JesseFarebro/deadbeef-librarybrowser"
 SRC_URI="https://github.com/JesseFarebro/${PN}/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND+=" !media-plugins/deadbeef-fb:0"
 

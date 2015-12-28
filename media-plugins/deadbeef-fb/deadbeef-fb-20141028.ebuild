@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/deadbeef-fb"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~*"
+KEYWORDS="~amd64 ~x86"
 
 IUSE+=" debug"
 
