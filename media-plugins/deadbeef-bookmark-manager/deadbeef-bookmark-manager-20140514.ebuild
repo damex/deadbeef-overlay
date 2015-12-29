@@ -4,7 +4,7 @@ EAPI="5"
 
 inherit deadbeef-plugins
 
-GITHUB_COMMIT="ff827d577941481b1e6e360f87a254f50c524628"
+GITHUB_COMMIT="44b067c30d6301c2eca6e91159b6267fa847d850"
 
 DESCRIPTION="DeaDBeeF bookmark manager plugin"
 HOMEPAGE="https://github.com/cboxdoerfer/ddb_bookmark_manager"
