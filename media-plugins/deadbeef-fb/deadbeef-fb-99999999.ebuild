@@ -6,11 +6,11 @@ DEADBEEF_GUI="yes"
 
 inherit autotools deadbeef-plugins git-r3
 
-EGIT_REPO_URI="git://git.code.sf.net/p/${PN}/code"
+EGIT_REPO_URI="https://gitlab.com/zykure/deadbeef-fb.git"
 EGIT_BRANCH="master"
 
 DESCRIPTION="DeaDBeeF filebrowser plugin"
-HOMEPAGE="http://sourceforge.net/projects/deadbeef-fb"
+HOMEPAGE="https://gitlab.com/zykure/deadbeef-fb"
 
 LICENSE="GPL-2"
 KEYWORDS=""
