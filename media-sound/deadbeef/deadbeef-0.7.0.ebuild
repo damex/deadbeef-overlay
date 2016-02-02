@@ -9,8 +9,7 @@ PLOCALE_BACKUP="en_GB"
 
 inherit autotools eutils fdo-mime gnome2-utils l10n
 
-GITHUB_COMMIT="d7f434e61a43568306c36ea4831add5fa13a8967"
-SRC_URI="https://github.com/Alexey-Yakovenko/deadbeef/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Alexey-Yakovenko/deadbeef/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 
@@ -132,7 +131,7 @@ DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool:0
 		virtual/libintl:0 )"
 
-S="${WORKDIR}/${PN}-${GITHUB_COMMIT}"
+S="${WORKDIR}/${P}"
 
 src_prepare() {
 	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
