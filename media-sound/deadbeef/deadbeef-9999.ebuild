@@ -7,7 +7,7 @@ PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja k
 
 PLOCALE_BACKUP="en_GB"
 
-inherit autotools eutils fdo-mime git-r3 gnome2-utils l10n
+inherit autotools eutils fdo-mime gnome2-utils l10n
 
 EGIT_REPO_URI="https://github.com/Alexey-Yakovenko/${PN}.git"
 EGIT_BRANCH="master"
@@ -25,6 +25,7 @@ LICENSE="BSD
 	alac? ( MIT GPL-2 )
 	alsa? ( GPL-2 )
 	cdda? ( GPL-2 LGPL-2 GPL-3 )
+	cdparanoia ( GPL-2 )
 	cover? ( ZLIB )
 	converter? ( GPL-2 )
 	curl? ( curl ZLIB )
@@ -68,11 +69,12 @@ LICENSE="BSD
 SLOT="0"
 
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mad +mp3 +sndfile +vorbis
-	aac adplug alac cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer
+	aac adplug alac cdda cdparanoia converter cover cover-imlib2 cover-network curl dts dumb equalizer
 	ffmpeg gme gtk3 lastfm libav libnotify libsamplerate mac midi mms mono2stereo mpg123 musepack nls
 	nullout oss playlist-browser psf pulseaudio sc68 shell-exec shn sid tta unity vtx wavpack wma zip"
 
-REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
+REQUIRED_USE="cdparanoia? ( cdda )
+	converter? ( || ( gtk2 gtk3 ) )
 	cover-imlib2? ( cover )
 	cover-network? ( cover curl )
 	cover? ( || ( gtk2 gtk3 ) )
@@ -80,6 +82,7 @@ REQUIRED_USE="converter? ( || ( gtk2 gtk3 ) )
 	lastfm? ( curl )
 	mp3? ( || ( mad mpg123 ) )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
+	shell-exec? ( || ( gtk2 gtk3 ) )
 	|| ( alsa oss pulseaudio nullout )"
 
 PDEPEND="media-plugins/deadbeef-plugins-meta:0"
@@ -91,6 +94,7 @@ RDEPEND="dev-libs/glib:2
 	alac? ( media-libs/faad2:0 )
 	cdda? ( dev-libs/libcdio:0=
 		media-libs/libcddb:0 )
+	cdparanoia? ( dev-libs/libcdio-paranoia:0 )
 	cover? ( cover-imlib2? ( media-libs/imlib2:0 )
 		media-libs/libpng:0=
 		virtual/jpeg:0
@@ -128,20 +132,22 @@ DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool:0
 		virtual/libintl:0 )"
 
+S="${WORKDIR}/${PN}-${GITHUB_COMMIT}"
+
 src_prepare() {
 	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
 		epatch "${FILESDIR}/${PN}-remove-pt_br-help-translation.patch"
-		rm "${S}/translation/help.pt_BR.txt" || die
+		rm -v "${S}/translation/help.pt_BR.txt" || die
 	fi
 
 	if ! use_if_iuse linguas_ru && use_if_iuse linguas_pt_BR ; then
 		epatch "${FILESDIR}/${PN}-remove-ru-help-translation.patch"
-		rm "${S}/translation/help.ru.txt" || die
+		rm -v "${S}/translation/help.ru.txt" || die
 	fi
 
 	if ! use_if_iuse linguas_pt_BR && ! use_if_iuse linguas_ru ; then
 		epatch "${FILESDIR}/${PN}-remove-pt_br-and-ru-help-translation.patch"
-		rm "${S}/translation/help.pt_BR.txt" "${S}/translation/help.ru.txt" || die
+		rm -v "${S}/translation/help.pt_BR.txt" "${S}/translation/help.ru.txt" || die
 	fi
 
 	if use midi ; then
@@ -160,24 +166,16 @@ src_prepare() {
 }
 
 src_configure() {
-	if use shell-exec ; then
-		if use gtk2 || use gtk3 ; then
-			shell-exec-ui="--enable-shellexec-ui"
-		else
-			shell-exec-ui="--disable-shellexec-ui"
-		fi
-	fi
-
 	econf --disable-coreaudio \
 		--disable-portable \
 		--disable-static \
 		--docdir=/usr/share/${PN} \
-		${shell-exec-ui} \
 		$(use_enable aac) \
 		$(use_enable adplug) \
 		$(use_enable alac) \
 		$(use_enable alsa) \
 		$(use_enable cdda) \
+		$(use_enable cdparanoia cdda-paranoia) \
 		$(use_enable converter) \
 		$(use_enable cover artwork) \
 		$(use_enable cover-imlib2 artwork-imlib2) \
@@ -211,7 +209,7 @@ src_configure() {
 		$(use_enable psf) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable sc68) \
-		$(use_enable shell-exec shellexec) \
+		$(use_enable shell-exec shellexecui) \
 		$(use_enable shn) \
 		$(use_enable sid) \
 		$(use_enable sndfile) \
