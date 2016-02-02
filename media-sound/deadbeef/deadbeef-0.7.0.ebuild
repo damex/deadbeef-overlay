@@ -9,7 +9,7 @@ PLOCALE_BACKUP="en_GB"
 
 inherit autotools eutils fdo-mime gnome2-utils l10n
 
-SRC_URI="https://github.com/Alexey-Yakovenko/deadbeef/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
 
@@ -157,7 +157,7 @@ src_prepare() {
 
 	if ! use unity ; then
 		# remove unity trash
-		epatch "${FILESDIR}/${PN}-0.6.3-remove-unity-trash.patch"
+		epatch "${FILESDIR}/${P}-remove-unity-trash.patch"
 	fi
 
 	config_rpath_update "${S}/config.rpath"
