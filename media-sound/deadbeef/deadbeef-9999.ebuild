@@ -1,4 +1,6 @@
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Id$
 
 EAPI="5"
 
@@ -20,7 +22,7 @@ HOMEPAGE="http://deadbeef.sourceforge.net"
 LICENSE="BSD
 	UNICODE
 	ZLIB
-	aac? ( GPL GPL-2 )
+	aac? ( GPL-1 GPL-2 )
 	adplug? ( LGPL-2.1 ZLIB )
 	alac? ( MIT GPL-2 )
 	alsa? ( GPL-2 )
@@ -53,7 +55,7 @@ LICENSE="BSD
 	nullout? ( ZLIB )
 	oss? ( GPL-2 )
 	playlist-browser? ( ZLIB )
-	psf? ( BSD GPL MAME ZLIB )
+	psf? ( BSD GPL-1 MAME ZLIB )
 	pulseaudio? ( GPL-2 )
 	shell-exec? ( GPL-2 )
 	shn? ( shorten ZLIB )
