@@ -9,7 +9,7 @@ PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja k
 
 PLOCALE_BACKUP="en_GB"
 
-inherit autotools eutils fdo-mime gnome2-utils l10n
+inherit autotools eutils fdo-mime git-r3 gnome2-utils l10n
 
 EGIT_REPO_URI="https://github.com/Alexey-Yakovenko/${PN}.git"
 EGIT_BRANCH="master"
@@ -133,8 +133,6 @@ DEPEND="${RDEPEND}
 		virtual/libintl:0 )
 	mac? ( x86? ( dev-lang/yasm:0 )
 		amd64? ( dev-lang/yasm:0 ) )"
-
-S="${WORKDIR}/${PN}-${GITHUB_COMMIT}"
 
 src_prepare() {
 	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
