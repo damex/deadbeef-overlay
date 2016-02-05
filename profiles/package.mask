@@ -11,6 +11,7 @@
 =media-plugins/deadbeef-musical-spectrum-99999999
 =media-plugins/deadbeef-opus-99999999
 =media-plugins/deadbeef-replaygain-control-99999999
+=media-plugins/deadbeef-soxr-99999999
 =media-plugins/deadbeef-spectrogram-99999999
 =media-plugins/deadbeef-stereo-widener-99999999
 =media-plugins/deadbeef-vk-9999

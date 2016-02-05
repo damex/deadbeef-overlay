@@ -4,16 +4,16 @@
 
 EAPI="5"
 
-inherit deadbeef-plugins
+inherit deadbeef-plugins git-r3
 
 GITHUB_COMMIT="f0732d685715782c9d045cf0f9da1055e7d2c851"
 
 DESCRIPTION="DeaDBeeF sox resampler plugin"
 HOMEPAGE="https://github.com/silentlexx/deadbeef_soxr"
-SRC_URI="https://github.com/silentlexx/deadbeef_soxr/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
+EGIT_REPO_URI="https://gitorious.org/silentlexx/deadbeef_soxr.git"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 RDEPEND+=" media-libs/soxr:0"
 
