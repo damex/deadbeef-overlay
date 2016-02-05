@@ -110,8 +110,6 @@ RDEPEND="dev-libs/glib:2
 	hotkeys? ( x11-libs/libX11:0 )
 	libnotify? ( sys-apps/dbus:0 )
 	libsamplerate? ( media-libs/libsamplerate:0 )
-	mac? ( x86? ( dev-lang/yasm:0 )
-		amd64? ( dev-lang/yasm:0 ) )
 	midi? ( media-sound/timidity-freepats:0 )
 	mp3? ( media-libs/libmad:0 )
 	psf? ( sys-libs/zlib:0 )
@@ -125,7 +123,9 @@ RDEPEND="dev-libs/glib:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig:0
 	nls? ( dev-util/intltool:0
-		virtual/libintl:0 )"
+		virtual/libintl:0 )
+	mac? ( x86? ( dev-lang/yasm:0 )
+		amd64? ( dev-lang/yasm:0 ) )"
 
 src_prepare() {
 	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
