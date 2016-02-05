@@ -26,7 +26,7 @@ LICENSE="BSD
 	alac? ( MIT GPL-2 )
 	alsa? ( GPL-2 )
 	cdda? ( GPL-2 LGPL-2 GPL-3 )
-	cdparanoia ( GPL-2 )
+	cdparanoia? ( GPL-2 )
 	cover? ( ZLIB )
 	converter? ( GPL-2 )
 	curl? ( curl ZLIB )
