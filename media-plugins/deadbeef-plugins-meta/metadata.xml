@@ -19,6 +19,7 @@
 		<flag name='musical-spectrum'>Draws musical spectrum for current track</flag>
 		<flag name='opus'>Ogg opus decoder support</flag>
 		<flag name='replaygain-control'>Advanced control of replaygain</flag>
+		<flag name='soxr'>Sox resampler</flag>
 		<flag name='spectrogram'>Draws spectrogram for current track</flag>
 		<flag name='stereo-widener'>Widens stereo</flag>
 		<flag name='vk'>Play music from vk.com social network</flag>
