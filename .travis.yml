@@ -1,6 +1,4 @@
 language: python
-python:
-    - pypy
 env:
     - portage_version="2.2.26"
 before_script:
@@ -14,7 +12,7 @@ before_script:
     - mkdir -p /etc/portage /usr/portage/distfiles
     - wget "https://www.gentoo.org/dtd/metadata.dtd" -O /usr/portage/distfiles/metadata.dtd
     - tar xzf portage-${portage_version}.tar.gz
-    - tar xzf portage-tree.tar.gz -C /usr/portage
+    - tar xzf portage-tree.tar.gz -C /usr/portage --strip-components=1
     - cp portage-${portage_version}/cnf/repos.conf /etc/portage/
     - ln -s /usr/portage/profiles/base/ /etc/portage/make.profile
     - cd deadbeef-overlay
