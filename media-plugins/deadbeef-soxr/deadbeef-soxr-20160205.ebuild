@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit deadbeef-plugins
 
-GITHUB_COMMIT="f0732d685715782c9d045cf0f9da1055e7d2c851"
+GITHUB_COMMIT="939fa200aff94c0ef0c817768acff7a728510964"
 
 DESCRIPTION="DeaDBeeF sox resampler plugin"
 HOMEPAGE="https://github.com/silentlexx/deadbeef_soxr"
