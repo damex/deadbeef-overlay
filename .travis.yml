@@ -2,10 +2,10 @@ language: python
 env:
     - portage_version="2.2.26"
 before_script:
-    - mkdir deadbeef-overlay
-    - find -maxdepth 1 ! -name deadbeef-overlay -exec mv {} deadbeef-overlay \;
+    - mkdir travis-overlay
+    - find -maxdepth 1 ! -name travis-overlay -exec mv {} travis-overlay \;
     - wget "https://raw.githubusercontent.com/damex/travis-overlay-checks/master/.travis.yml" -O .travis.yml.live
-    - if ! diff -q deadbeef-overlay/.travis.yml .travis.yml.live ; then echo ".travis.yml outdated. please get updated version from https://raw.githubusercontent.com/damex/travis-overlay-checks/master/.travis.yml" && exit 1 ; fi
+    - if ! diff -q travis-overlay/.travis.yml .travis.yml.live ; then echo ".travis.yml outdated. please get updated version from https://raw.githubusercontent.com/damex/travis-overlay-checks/master/.travis.yml" && exit 1 ; fi
     - wget "https://github.com/gentoo/portage/archive/v${portage_version}.tar.gz" -O portage-${portage_version}.tar.gz
     - wget "https://github.com/gentoo-mirror/gentoo/archive/master.tar.gz" -O portage-tree.tar.gz
     - sudo chmod a+rwX /etc/passwd /etc/group /etc /usr
@@ -17,6 +17,6 @@ before_script:
     - tar xzf portage-tree.tar.gz -C /usr/portage --strip-components=1
     - cp portage-${portage_version}/cnf/repos.conf /etc/portage
     - ln -s /usr/portage/profiles/base/ /etc/portage/make.profile
-    - cd deadbeef-overlay
+    - cd travis-overlay
 script:
     - python ../portage-${portage_version}/bin/repoman full -d
