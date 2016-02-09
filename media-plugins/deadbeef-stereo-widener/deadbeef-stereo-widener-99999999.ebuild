@@ -14,5 +14,6 @@ LICENSE="MIT"
 KEYWORDS=""
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}.patch"
+	epatch "${FILESDIR}/${PN}-api.patch"
+	epatch "${FILESDIR}/${PN}-build.patch"
 }
