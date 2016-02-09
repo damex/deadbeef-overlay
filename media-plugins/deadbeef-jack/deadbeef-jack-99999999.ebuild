@@ -7,16 +7,17 @@ EAPI="5"
 inherit deadbeef-plugins git-r3
 
 DESCRIPTION="DeaDBeeF jack output plugin"
-HOMEPAGE="https://gitorious.org/deadbeef-sm-plugins/jack"
-EGIT_REPO_URI="https://gitorious.org/deadbeef-sm-plugins/jack.git"
+HOMEPAGE="https://github.com/Alexey-Yakovenko/jack"
+EGIT_REPO_URI="https://github.com/Alexey-Yakovenko/jack.git"
 
 LICENSE="MIT"
 KEYWORDS=""
 
-RDEPEND="media-sound/jack-audio-connection-kit:0"
+RDEPEND+=" media-sound/jack-audio-connection-kit:0"
 
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}.patch"
+	epatch "${FILESDIR}/${PN}-api.patch"
+	epatch "${FILESDIR}/${PN}-build.patch"
 }
