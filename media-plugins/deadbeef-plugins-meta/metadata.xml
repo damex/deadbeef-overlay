@@ -18,6 +18,7 @@
 		<flag name='mpris'>MPRIS support</flag>
 		<flag name='musical-spectrum'>Draws musical spectrum for current track</flag>
 		<flag name='opus'>Ogg opus decoder support</flag>
+		<flag name='quick-search'>Quick search support</flag>
 		<flag name='replaygain-control'>Advanced control of replaygain</flag>
 		<flag name='soxr'>Sox resampler</flag>
 		<flag name='spectrogram'>Draws spectrogram for current track</flag>
