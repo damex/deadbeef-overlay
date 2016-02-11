@@ -8,7 +8,7 @@ DEADBEEF_GUI="yes"
 
 inherit deadbeef-plugins git-r3
 
-DESCRIPTION="DeaDBeeF waveform seekbar plugin"
+DESCRIPTION="DeaDBeeF quick search plugin"
 HOMEPAGE="https://github.com/cboxdoerfer/ddb_quick_search"
 EGIT_REPO_URI="https://github.com/cboxdoerfer/ddb_quick_search.git"
 

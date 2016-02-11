@@ -10,7 +10,7 @@ inherit deadbeef-plugins
 
 GITHUB_COMMIT="f1fc79733c8e488259ccf168bcf5b1445b71975c"
 
-DESCRIPTION="DeaDBeeF waveform seekbar plugin"
+DESCRIPTION="DeaDBeeF quick search plugin"
 HOMEPAGE="https://github.com/cboxdoerfer/ddb_quick_search"
 SRC_URI="https://github.com/cboxdoerfer/ddb_quick_search/archive/${GITHUB_COMMIT}.tar.gz -> ${P}.tar.gz"
 
