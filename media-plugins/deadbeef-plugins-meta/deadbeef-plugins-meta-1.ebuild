@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="archive bookmark-manager bs2b decast filebrowser gnome-mmkeys infobar
 	jack librarybrowser mpris musical-spectrum opus quick-search
-	replaygain-control soxr spectrogram stereo-widener vk vu-meter
-	waveform-seekbar"
+	replaygain-control soxr spectrogram statusnotifier stereo-widener
+	vk vu-meter waveform-seekbar"
 
 PDEPEND="archive? ( media-plugins/deadbeef-archive-reader:0 )
 	bookmark-manager? ( media-plugins/deadbeef-bookmark-manager:0 )
@@ -32,6 +32,7 @@ PDEPEND="archive? ( media-plugins/deadbeef-archive-reader:0 )
 	replaygain-control? ( media-plugins/deadbeef-replaygain-control:0 )
 	soxr? ( media-plugins/deadbeef-soxr:0 )
 	spectrogram? ( media-plugins/deadbeef-spectrogram:0 )
+	statusnotifier? ( media-plugins/deadbeef-statusnotifier:0 )
 	stereo-widener? ( media-plugins/deadbeef-stereo-widener:0 )
 	vk? ( media-plugins/deadbeef-vk:0 )
 	vu-meter? ( media-plugins/deadbeef-vu-meter:0 )

@@ -22,6 +22,7 @@
 		<flag name='replaygain-control'>Advanced control of replaygain</flag>
 		<flag name='soxr'>Sox resampler</flag>
 		<flag name='spectrogram'>Draws spectrogram for current track</flag>
+		<flag name='statusnotifier'>Provides tray icon in plasma5 (implements StatusNotifierItem)</flag>
 		<flag name='stereo-widener'>Widens stereo</flag>
 		<flag name='vk'>Play music from vk.com social network</flag>
 		<flag name='vu-meter'>Draws vu meter for current track</flag>
