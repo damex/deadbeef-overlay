@@ -133,7 +133,7 @@ DEPEND="${RDEPEND}
 	mac? ( x86? ( dev-lang/yasm:0 )
 		amd64? ( dev-lang/yasm:0 ) )"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S="${WORKDIR}/${P}"
 
 src_prepare() {
 	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
