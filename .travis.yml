@@ -13,10 +13,10 @@ before_script:
     - echo "portage::250:portage,travis" >> /etc/group
     - mkdir -p /etc/portage /usr/portage/distfiles
     - wget "https://www.gentoo.org/dtd/metadata.dtd" -O /usr/portage/distfiles/metadata.dtd
-    - tar xzf repoman-${portage_version}.tar.gz
+    - tar xzf portage-repoman-${portage_version}.tar.gz
     - tar xzf portage-tree.tar.gz -C /usr/portage --strip-components=1
-    - cp repoman-${portage_version}/cnf/repos.conf /etc/portage
+    - cp portage-repoman-${portage_version}/cnf/repos.conf /etc/portage
     - ln -s /usr/portage/profiles/base/ /etc/portage/make.profile
     - cd travis-overlay
 script:
-    - python ../repoman-${portage_version}/bin/repoman full -d
+    - python ../portage-repoman-${portage_version}/bin/repoman full -d
