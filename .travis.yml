@@ -1,6 +1,6 @@
 language: python
 env:
-    - portage_version="2.2.26"
+    - portage_version="2.3.0"
 before_script:
     - mkdir travis-overlay
     - find -maxdepth 1 ! -name travis-overlay -exec mv {} travis-overlay \;
