@@ -1,5 +1,5 @@
---- Makefile.am	2014-09-13 12:56:05.997575732 +0400
-+++ Makefile.am	2014-09-13 12:56:29.964328671 +0400
+--- a/Makefile.am	2014-09-13 12:56:05.997575732 +0400
++++ b/Makefile.am	2014-09-13 12:56:29.964328671 +0400
 @@ -56,8 +56,7 @@
  
  docs_DATA = README help.txt about.txt translators.txt ChangeLog\

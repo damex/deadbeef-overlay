@@ -1,5 +1,5 @@
---- deadbeef.desktop.in	2016-04-07 19:52:40.000000000 +0000
-+++ deadbeef.desktop.in.org	2016-04-09 13:11:58.514294467 +0000
+--- a/deadbeef.desktop.in	2016-04-07 19:52:40.000000000 +0000
++++ b/deadbeef.desktop.in.org	2016-04-09 13:11:58.514294467 +0000
 @@ -15,63 +15,3 @@
  Type=Application
  Icon=deadbeef
