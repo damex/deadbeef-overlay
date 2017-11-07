@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/Alexey-Yakovenko/jack.git"
 LICENSE="MIT"
 KEYWORDS=""
 
-RDEPEND+=" media-sound/jack-audio-connection-kit:0"
+RDEPEND+=" virtual/jack:0"
 
 DEPEND="${RDEPEND}"
 
