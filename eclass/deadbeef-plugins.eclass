@@ -10,7 +10,7 @@
 # Many things that would normally be done manually is automated.
 
 if [[ "${EAPI}" -lt 5 ]] ; then
-	die "EAPI="${EAPI}" is not supported"
+	die "EAPI=${EAPI} is not supported"
 fi
 
 inherit eutils
