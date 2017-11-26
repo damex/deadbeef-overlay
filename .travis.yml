@@ -1,6 +1,6 @@
 language: python
 env:
-    - portage_version="2.3.0"
+    - portage_version="2.3.13"
 install: "pip install lxml"
 before_script:
     - mkdir travis-overlay
