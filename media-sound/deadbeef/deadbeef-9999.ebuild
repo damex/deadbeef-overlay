@@ -227,7 +227,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	fdo-xdg_desktop_database_update
+	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 
 	if use gtk2 || use gtk3 ; then
@@ -236,7 +236,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	fdo-xdg_desktop_database_update
+	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 
 	if use gtk2 || use gtk3 ; then
