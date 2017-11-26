@@ -1,23 +1,23 @@
 language: python
 env:
-    - portage_version="2.3.13"
+    - repoman_version="2.3.3"
 install: "pip install lxml"
 before_script:
     - mkdir travis-overlay
     - find -maxdepth 1 ! -name travis-overlay -exec mv {} travis-overlay \;
     - wget "https://raw.githubusercontent.com/damex/travis-overlay-checks/master/.travis.yml" -O .travis.yml.live
     - if ! diff -q travis-overlay/.travis.yml .travis.yml.live ; then echo ".travis.yml outdated. please get updated version from https://raw.githubusercontent.com/damex/travis-overlay-checks/master/.travis.yml" && exit 1 ; fi
-    - wget "https://github.com/gentoo/portage/archive/repoman-${portage_version}.tar.gz" -O portage-repoman-${portage_version}.tar.gz
+    - wget "https://github.com/gentoo/portage/archive/repoman-${repoman_version}.tar.gz" -O portage-repoman-${repoman_version}.tar.gz
     - wget "https://github.com/gentoo-mirror/gentoo/archive/master.tar.gz" -O portage-tree.tar.gz
     - sudo chmod a+rwX /etc/passwd /etc/group /etc /usr
     - echo "portage:x:250:250:portage:/var/tmp/portage:/bin/false" >> /etc/passwd
     - echo "portage::250:portage,travis" >> /etc/group
     - mkdir -p /etc/portage /usr/portage/distfiles
     - wget "https://www.gentoo.org/dtd/metadata.dtd" -O /usr/portage/distfiles/metadata.dtd
-    - tar xzf portage-repoman-${portage_version}.tar.gz
+    - tar xzf portage-repoman-${repoman_version}.tar.gz
     - tar xzf portage-tree.tar.gz -C /usr/portage --strip-components=1
-    - cp portage-repoman-${portage_version}/cnf/repos.conf /etc/portage
+    - cp portage-repoman-${repoman_version}/cnf/repos.conf /etc/portage
     - ln -s /usr/portage/profiles/base/ /etc/portage/make.profile
     - cd travis-overlay
 script:
-    - python ../portage-repoman-${portage_version}/repoman/bin/repoman full -d
+    - python ../portage-repoman-${repoman_version}/repoman/bin/repoman full -d
