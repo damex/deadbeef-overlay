@@ -9,7 +9,7 @@ PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja k
 
 PLOCALE_BACKUP="en_GB"
 
-inherit autotools fdo-mime gnome2-utils l10n versionator
+inherit autotools gnome2-utils l10n versionator xdg-utils
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
@@ -230,8 +230,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
+	fdo-xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 
 	if use gtk2 || use gtk3 ; then
 		gnome2_icon_cache_update
@@ -239,8 +239,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
+	fdo-xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 
 	if use gtk2 || use gtk3 ; then
 		gnome2_icon_cache_update
