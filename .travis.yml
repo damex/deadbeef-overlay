@@ -17,7 +17,7 @@ before_script:
     - tar xzf portage-repoman-${repoman_version}.tar.gz
     - tar xzf portage-tree.tar.gz -C /usr/portage --strip-components=1
     - cp portage-repoman-${repoman_version}/cnf/repos.conf /etc/portage
-    - ln -s /usr/portage/profiles/base/ /etc/portage/make.profile
+    - ln -s /usr/portage/profiles/default/linux/amd64/13.0 /etc/portage/make.profile
     - cd travis-overlay
 script:
     - python ../portage-repoman-${repoman_version}/repoman/bin/repoman full -d
