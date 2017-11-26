@@ -81,6 +81,7 @@ REQUIRED_USE="cdparanoia? ( cdda )
 	cover? ( || ( gtk2 gtk3 ) )
 	ffmpeg? ( !libav )
 	lastfm? ( curl )
+	libav? ( !ffmpeg )
 	mp3? ( || ( mad mpg123 ) )
 	playlist-browser? ( || ( gtk2 gtk3 ) )
 	shell-exec? ( || ( gtk2 gtk3 ) )
@@ -167,10 +168,17 @@ src_prepare() {
 }
 
 src_configure() {
+	if use ffmpeg && ! use libav ; then
+		ffmpeg_configure="$(use_enable ffmpeg)"
+	elif use libav && ! use ffmpeg ; then
+		ffmpeg_configure="$(use_enable libav ffmpeg)"
+	fi
+
 	econf --disable-coreaudio \
 		--disable-portable \
 		--disable-static \
 		--docdir=/usr/share/${PN} \
+		"${ffmpeg_configure}" \
 		$(use_enable aac) \
 		$(use_enable adplug) \
 		$(use_enable alac) \
@@ -185,14 +193,12 @@ src_configure() {
 		$(use_enable dts dca) \
 		$(use_enable dumb) \
 		$(use_enable equalizer supereq) \
-		$(use_enable ffmpeg) \
 		$(use_enable flac) \
 		$(use_enable gme) \
 		$(use_enable gtk2) \
 		$(use_enable gtk3) \
 		$(use_enable hotkeys) \
 		$(use_enable lastfm lfm) \
-		$(use_enable libav ffmpeg) \
 		$(use_enable libnotify notify) \
 		$(use_enable libsamplerate src) \
 		$(use_enable m3u) \
