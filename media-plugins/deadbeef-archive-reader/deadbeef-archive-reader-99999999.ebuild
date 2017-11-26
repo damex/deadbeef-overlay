@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 inherit deadbeef-plugins subversion
 
@@ -13,5 +13,5 @@ LICENSE="LGPL-2.1"
 KEYWORDS=""
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-flags.patch"
+	eapply "${FILESDIR}/${PN}-flags.patch"
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja kk km lg
 	lt nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
@@ -135,17 +135,17 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
-		epatch "${FILESDIR}/${PN}-remove-pt_br-help-translation.patch"
+		eapply "${FILESDIR}/${PN}-remove-pt_br-help-translation.patch"
 		rm -v "${S}/translation/help.pt_BR.txt" || die
 	fi
 
 	if ! use_if_iuse linguas_ru && use_if_iuse linguas_pt_BR ; then
-		epatch "${FILESDIR}/${PN}-remove-ru-help-translation.patch"
+		eapply "${FILESDIR}/${PN}-remove-ru-help-translation.patch"
 		rm -v "${S}/translation/help.ru.txt" || die
 	fi
 
 	if ! use_if_iuse linguas_pt_BR && ! use_if_iuse linguas_ru ; then
-		epatch "${FILESDIR}/${PN}-remove-pt_br-and-ru-help-translation.patch"
+		eapply "${FILESDIR}/${PN}-remove-pt_br-and-ru-help-translation.patch"
 		rm -v "${S}/translation/help.pt_BR.txt" "${S}/translation/help.ru.txt" || die
 	fi
 
@@ -157,7 +157,7 @@ src_prepare() {
 
 	if ! use unity ; then
 		# remove unity trash
-		epatch "${FILESDIR}/${PN}-0.6.3-remove-unity-trash.patch"
+		eapply "${FILESDIR}/${PN}-0.6.3-remove-unity-trash.patch"
 	fi
 
 	config_rpath_update "${S}/config.rpath"

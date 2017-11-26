@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 DEADBEEF_GUI="yes"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/deadbeef-fb-${PV/*_p/}-${GITLAB_COMMIT}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-avoid-version.patch"
+	eapply "${FILESDIR}/${PN}-avoid-version.patch"
 
 	eautoreconf
 }

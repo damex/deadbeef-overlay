@@ -9,7 +9,7 @@
 # This eclass makes trivial deadbeef plugin ebuilds possible.
 # Many things that would normally be done manually is automated.
 
-if [[ "${EAPI}" -lt 5 ]] ; then
+if [[ "${EAPI}" -lt 6 ]] ; then
 	die "EAPI=${EAPI} is not supported"
 fi
 

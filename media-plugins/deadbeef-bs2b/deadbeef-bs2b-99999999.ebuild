@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 inherit deadbeef-plugins git-r3
 
@@ -17,5 +17,5 @@ RDEPEND+=" media-libs/libbs2b:0"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}.patch"
+	eapply "${FILESDIR}/${PN}.patch"
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 inherit deadbeef-plugins
 
@@ -17,6 +17,6 @@ KEYWORDS="~amd64 ~x86"
 S="${WORKDIR}/stereo-widener-${GITHUB_COMMIT}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-api.patch"
-	epatch "${FILESDIR}/${PN}-build.patch"
+	eapply "${FILESDIR}/${PN}-api.patch"
+	eapply "${FILESDIR}/${PN}-build.patch"
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 inherit deadbeef-plugins git-r3
 
@@ -13,6 +13,6 @@ LICENSE="MIT"
 KEYWORDS=""
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-api.patch"
-	epatch "${FILESDIR}/${PN}-build.patch"
+	eapply "${FILESDIR}/${PN}-api.patch"
+	eapply "${FILESDIR}/${PN}-build.patch"
 }

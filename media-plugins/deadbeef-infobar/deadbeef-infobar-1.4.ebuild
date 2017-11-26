@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 DEADBEEF_GUI="yes"
 
@@ -21,10 +21,10 @@ RDEPEND+=" dev-libs/libxml2:2
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-cflags.diff"
-	epatch "${FILESDIR}/${PN}-load-gtk2-and-gtk3-version-fix.diff"
+	eapply "${FILESDIR}/${PN}-cflags.diff"
+	eapply "${FILESDIR}/${PN}-load-gtk2-and-gtk3-version-fix.diff"
 
-	use gtk2 && epatch "${FILESDIR}/${PN}-focus-fix.diff"
+	use gtk2 && eapply "${FILESDIR}/${PN}-focus-fix.diff"
 }
 
 src_compile() {

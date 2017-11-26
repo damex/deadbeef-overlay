@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 DEADBEEF_GUI="yes"
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/ddb_waveform_seekbar-${PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-cflags-lm.patch"
+	eapply "${FILESDIR}/${PN}-cflags-lm.patch"
 }
 
 src_compile() {
