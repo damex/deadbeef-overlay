@@ -157,8 +157,10 @@ src_prepare() {
 
 	if ! use unity ; then
 		# remove unity trash
-		eapply "${FILESDIR}/${PN}-0.6.3-remove-unity-trash.patch"
+		eapply "${FILESDIR}/${P}-remove-unity-trash.patch"
 	fi
+
+	eapply_user
 
 	config_rpath_update "${S}/config.rpath"
 	eautoreconf
