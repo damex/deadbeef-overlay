@@ -22,9 +22,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${GITHUB_COMMIT}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-avoid-version.patch"
+PATCHES=( "${FILESDIR}/${PN}-avoid-version.patch" )
 
+src_prepare() {
+	default
 	eautoreconf
 }
 

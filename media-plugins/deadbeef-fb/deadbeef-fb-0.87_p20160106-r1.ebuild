@@ -7,7 +7,7 @@ DEADBEEF_GUI="yes"
 
 inherit autotools deadbeef-plugins
 
-GITLAB_COMMIT="ee4f6b3e280c7e985b04d463decc0545387ae7db"
+GITLAB_COMMIT="c2afbbe5a32d1fa997b20b962eacb012bc1b93a2"
 
 DESCRIPTION="DeaDBeeF filebrowser plugin"
 HOMEPAGE="https://gitlab.com/zykure/deadbeef-fb"
@@ -24,9 +24,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/deadbeef-fb-${PV/*_p/}-${GITLAB_COMMIT}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-avoid-version.patch"
+PATCHES=( "${FILESDIR}/${PN}-avoid-version.patch" )
 
+src_prepare() {
+	default
 	eautoreconf
 }
 

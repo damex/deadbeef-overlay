@@ -14,6 +14,7 @@ KEYWORDS=""
 IUSE=""
 
 src_prepare() {
+	default
 	eautoreconf
 }
 

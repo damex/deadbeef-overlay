@@ -12,6 +12,4 @@ ESVN_REPO_URI="https://subversion.assembla.com/svn/deadbeef_vfs_archive_reader/t
 LICENSE="LGPL-2.1"
 KEYWORDS=""
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-flags.patch"
-}
+PATCHES=( "${FILESDIR}/${PN}-flags.patch" )

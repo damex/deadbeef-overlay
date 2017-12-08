@@ -16,6 +16,4 @@ RDEPEND+=" media-libs/libbs2b:0"
 
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}.patch"
-}
+PATCHES=( "${FILESDIR}/${PN}.patch" )

@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/jack-${GITHUB_COMMIT}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-api.patch"
-	eapply "${FILESDIR}/${PN}-build.patch"
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-api.patch"
+	"${FILESDIR}/${PN}-build.patch"
+)

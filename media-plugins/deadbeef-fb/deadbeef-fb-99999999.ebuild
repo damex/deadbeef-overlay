@@ -22,9 +22,10 @@ RDEPEND+=" !media-plugins/deadbeef-librarybrowser:0"
 
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-avoid-version.patch"
+PATCHES=( "${FILESDIR}/${PN}-avoid-version.patch" )
 
+src_prepare() {
+	default
 	eautoreconf
 }
 

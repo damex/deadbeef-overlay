@@ -20,9 +20,9 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/ddb_waveform_seekbar-${PV}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-cflags-lm.patch"
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-cflags-lm.patch"
+)
 
 src_compile() {
 	use gtk2 && emake gtk2
