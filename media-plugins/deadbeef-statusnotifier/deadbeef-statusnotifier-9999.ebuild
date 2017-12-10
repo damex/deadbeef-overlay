@@ -19,9 +19,10 @@ RDEPEND+=" dev-libs/libdbusmenu:0"
 DEPEND="${RDEPEND}"
 
 src_configure() {
-	local mycmakeargs="
-		$(cmake-utils_use_use gtk2 GTK2)
-		$(cmake-utils_use_use gtk3 GTK3)"
+	local mycmakeargs=(
+		-DUSE_GTK2="$(usex gtk2)"
+		-DUSE_GTK3="$(usex gtk3)"
+	)
 	cmake-utils_src_configure
 }
 
