@@ -19,7 +19,7 @@ RDEPEND+=" dev-libs/json-glib:0
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/db-vk-${PV}"
+S="${WORKDIR}/deadbeef-vk-${PV}"
 
 src_configure() {
 	local mycmakeargs=(

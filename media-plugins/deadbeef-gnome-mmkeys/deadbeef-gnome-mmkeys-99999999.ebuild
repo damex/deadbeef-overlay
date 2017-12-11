@@ -16,4 +16,4 @@ KEYWORDS=""
 
 RDEPEND+=" sys-apps/dbus:0"
 
-PATCHES=( "${FILESDIR}/${PN}.patch" )
+PATCHES=( -F3 "${FILESDIR}/${PN}.patch" )

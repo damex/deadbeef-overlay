@@ -19,7 +19,7 @@ RDEPEND+=" dev-db/sqlite:3"
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-cflags-lm.patch"
+	"${FILESDIR}/${PN}-cflags-lm-${PV}.patch"
 )
 
 src_compile() {

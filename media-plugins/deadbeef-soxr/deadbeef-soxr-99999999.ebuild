@@ -7,7 +7,7 @@ inherit deadbeef-plugins git-r3
 
 DESCRIPTION="DeaDBeeF sox resampler plugin"
 HOMEPAGE="https://github.com/silentlexx/deadbeef_soxr"
-EGIT_REPO_URI="https://gitorious.org/silentlexx/deadbeef_soxr.git"
+EGIT_REPO_URI="https://github.com/silentlexx/deadbeef_soxr.git"
 
 LICENSE="GPL-2"
 KEYWORDS=""

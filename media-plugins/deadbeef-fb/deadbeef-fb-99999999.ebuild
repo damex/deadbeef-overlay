@@ -22,7 +22,7 @@ RDEPEND+=" !media-plugins/deadbeef-librarybrowser:0"
 
 DEPEND="${RDEPEND}"
 
-PATCHES=( -p0 "${FILESDIR}/${PN}-avoid-version.patch" )
+PATCHES=( -p0 "${FILESDIR}/${PN}-avoid-version-${PV}.patch" )
 
 src_prepare() {
 	default
