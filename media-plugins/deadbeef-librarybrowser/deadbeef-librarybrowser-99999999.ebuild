@@ -18,7 +18,7 @@ RDEPEND+=" !media-plugins/deadbeef-fb:0"
 
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}/${PN}-avoid-version.patch" )
+PATCHES=( -p0 "${FILESDIR}/${PN}-avoid-version.patch" )
 
 src_prepare() {
 	default

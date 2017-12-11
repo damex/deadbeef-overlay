@@ -13,4 +13,4 @@ ESVN_REVISION="16"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
 
-PATCHES=( "${FILESDIR}/${PN}-flags.patch" )
+PATCHES=( -p0 "${FILESDIR}/${PN}-flags.patch" )
