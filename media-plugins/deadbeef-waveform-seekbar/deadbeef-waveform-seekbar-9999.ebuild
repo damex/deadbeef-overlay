@@ -18,9 +18,9 @@ RDEPEND+=" dev-db/sqlite:3"
 
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-cflags-lm.patch"
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-cflags-lm-${PV}.patch"
+)
 
 src_compile() {
 	use gtk2 && emake gtk2

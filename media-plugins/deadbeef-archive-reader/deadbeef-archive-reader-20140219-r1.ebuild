@@ -13,6 +13,8 @@ ESVN_REVISION="16"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-flags.patch"
-}
+PATCHES=(
+	-p0
+	"${FILESDIR}/${PN}-flags.patch"
+	"${FILESDIR}/fix-blargg_ok-declaration.patch"
+)

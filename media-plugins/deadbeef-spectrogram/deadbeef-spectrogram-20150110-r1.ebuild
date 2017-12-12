@@ -22,9 +22,7 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/ddb_spectrogram-${GITHUB_COMMIT}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-cflags.patch"
-}
+PATCHES=( "${FILESDIR}/${PN}-cflags.patch" )
 
 src_compile() {
 	use gtk2 && emake gtk2

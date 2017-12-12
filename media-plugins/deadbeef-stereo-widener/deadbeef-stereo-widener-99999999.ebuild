@@ -12,7 +12,7 @@ EGIT_REPO_URI="https://gitorious.org/deadbeef-sm-plugins/stereo-widener.git"
 LICENSE="MIT"
 KEYWORDS=""
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-api.patch"
-	eapply "${FILESDIR}/${PN}-build.patch"
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-api.patch"
+	"${FILESDIR}/${PN}-build.patch"
+)

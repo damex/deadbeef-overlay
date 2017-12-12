@@ -16,6 +16,4 @@ KEYWORDS=""
 
 RDEPEND+=" sys-apps/dbus:0"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}.patch"
-}
+PATCHES=( -F3 "${FILESDIR}/${PN}.patch" )

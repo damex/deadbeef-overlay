@@ -1,0 +1,13 @@
+--- a/Makefile.orig	2017-12-11 06:36:04.387007311 +0200
++++ b/Makefile	2017-12-11 06:36:26.394123217 +0200
+@@ -36,8 +36,8 @@
+ SQLITE_LIBS?=-lsqlite3
+ 
+ CC?=gcc
+-CFLAGS+=-Wall -O2 -fPIC -std=c99 -D_GNU_SOURCE
+-LDFLAGS+=-shared
++CFLAGS+=-Wall -O2 -fPIC -std=c99 -D_GNU_SOURCE -lm
++LDFLAGS+=-shared -lm
+ 
+ GTK2_DIR?=gtk2
+ GTK3_DIR?=gtk3

@@ -20,10 +20,13 @@ RDEPEND+=" dev-libs/libxml2:2
 
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-cflags.diff"
-	eapply "${FILESDIR}/${PN}-load-gtk2-and-gtk3-version-fix.diff"
+PATCHES=(
+	"${FILESDIR}/${PN}-cflags.diff"
+	"${FILESDIR}/${PN}-load-gtk2-and-gtk3-version-fix.diff"
+)
 
+src_prepare() {
+	default
 	use gtk2 && eapply "${FILESDIR}/${PN}-focus-fix.diff"
 }
 

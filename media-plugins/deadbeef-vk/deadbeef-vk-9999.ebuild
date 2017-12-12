@@ -19,13 +19,13 @@ RDEPEND+=" dev-libs/json-glib:0
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/db-vk-${PV}"
+S="${WORKDIR}/deadbeef-vk-${PV}"
 
 src_configure() {
-	local mycmakeargs="
-		$(cmake-utils_use_with gtk2 GTK2)
-		$(cmake-utils_use_with gtk3 GTK3)"
-
+	local mycmakeargs=(
+		-DWITH_GTK2="$(usex gtk2)"
+		-DWITH_GTK3="$(usex gtk3)"
+	)
 	cmake-utils_src_configure
 }
 

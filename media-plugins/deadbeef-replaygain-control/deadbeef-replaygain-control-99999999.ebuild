@@ -14,9 +14,9 @@ EGIT_REPO_URI="https://github.com/cboxdoerfer/ddb_replaygain_control.git"
 LICENSE="GPL-2"
 KEYWORDS=""
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-cflags.patch"
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-cflags.patch"
+)
 
 src_compile() {
 	use gtk2 && emake gtk2

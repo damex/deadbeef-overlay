@@ -24,9 +24,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/deadbeef-fb-${PV/*_p/}-${GITLAB_COMMIT}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-avoid-version.patch"
+PATCHES=( -p0 "${FILESDIR}/${PN}-avoid-version.patch" )
 
+src_prepare() {
+	default
 	eautoreconf
 }
 

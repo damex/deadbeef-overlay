@@ -16,6 +16,7 @@ IUSE=""
 S="${WORKDIR}/${P/-mpris/}"
 
 src_prepare() {
+	default
 	eautoreconf
 }
 

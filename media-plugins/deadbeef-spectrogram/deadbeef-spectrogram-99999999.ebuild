@@ -18,9 +18,9 @@ RDEPEND+=" sci-libs/fftw:3.0="
 
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-cflags.patch"
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-cflags.patch"
+)
 
 src_compile() {
 	use gtk2 && emake gtk2

@@ -20,6 +20,4 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/bs2b-${GITHUB_COMMIT}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}.patch"
-}
+PATCHES=( "${FILESDIR}/${PN}.patch" )

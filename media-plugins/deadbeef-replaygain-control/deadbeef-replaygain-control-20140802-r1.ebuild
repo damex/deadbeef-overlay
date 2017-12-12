@@ -18,9 +18,7 @@ KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/ddb_replaygain_control-${GITHUB_COMMIT}"
 
-src_prepare() {
-	eapply "${FILESDIR}/${PN}-cflags.patch"
-}
+PATCHES=( "${FILESDIR}/${PN}-cflags.patch" )
 
 src_compile() {
 	use gtk2 && emake gtk2
