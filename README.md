@@ -9,6 +9,6 @@ Layman users can add `deadbeef-overlay` overlay using the following command:
 
 `layman -a deadbeef-overlay`
 
-You can report bugs at:
+You can report bugs or feature requests at:
 
 * https://github.com/damex/deadbeef-overlay/issues
