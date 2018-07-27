@@ -162,9 +162,11 @@ src_prepare() {
 		eapply "${FILESDIR}/${PN}-0.7.2-remove-unity-trash.patch"
 	fi
 
-	eapply "${FILESDIR}/gcc-8/394536bd135dd5f9fac211c391ce2e1a04bda6da.patch"
-	eapply "${FILESDIR}/gcc-8/7163099d55c64bf11c3dac4dadfd83a0495ea207.patch"
-	eapply "${FILESDIR}/gcc-8/8fdeb8102d7a8be6773dc4accc5fe87901488724.patch"
+	if use arm ; then
+		eapply "${FILESDIR}/gcc-8/394536bd135dd5f9fac211c391ce2e1a04bda6da.patch"
+		eapply "${FILESDIR}/gcc-8/7163099d55c64bf11c3dac4dadfd83a0495ea207.patch"
+		eapply "${FILESDIR}/gcc-8/8fdeb8102d7a8be6773dc4accc5fe87901488724.patch"
+	fi
 
 	eapply_user
 
