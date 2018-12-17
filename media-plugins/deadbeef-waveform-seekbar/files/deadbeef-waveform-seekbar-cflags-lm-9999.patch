@@ -4,9 +4,9 @@
  SQLITE_LIBS?=-lsqlite3
  
  CC?=gcc
--CFLAGS+=-Wall -O2 -fPIC -std=c99 -D_GNU_SOURCE
+-CFLAGS+=-Wall -O2 -g -fPIC -std=c99 -D_GNU_SOURCE
 -LDFLAGS+=-shared
-+CFLAGS+=-Wall -O2 -fPIC -std=c99 -D_GNU_SOURCE -lm
++CFLAGS+=-Wall -O2 -g -fPIC -std=c99 -D_GNU_SOURCE -lm
 +LDFLAGS+=-shared -lm
  
  GTK2_DIR?=gtk2
