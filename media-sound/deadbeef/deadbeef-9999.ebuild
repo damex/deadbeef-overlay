@@ -52,6 +52,7 @@ LICENSE="BSD
 	mpg123? ( LGPL-2.1 ZLIB )
 	musepack? ( BSD ZLIB )
 	nullout? ( ZLIB )
+	opus? ( ZLIB )
 	oss? ( GPL-2 )
 	playlist-browser? ( ZLIB )
 	psf? ( BSD GPL-1 MAME ZLIB )
@@ -72,7 +73,7 @@ SLOT="0"
 IUSE="+alsa +flac +gtk2 +hotkeys +m3u +mad +mp3 +sndfile +vorbis
 	aac adplug alac cdda cdparanoia converter cover cover-imlib2 cover-network curl dts dumb equalizer
 	ffmpeg gme gtk3 lastfm libav libnotify libsamplerate mac midi mms mono2stereo mpg123 musepack nls
-	nullout oss playlist-browser psf pulseaudio sc68 shell-exec shn sid tta unity vtx wavpack wma zip"
+	nullout opus oss playlist-browser psf pulseaudio sc68 shell-exec shn sid tta unity vtx wavpack wma zip"
 
 REQUIRED_USE="cdparanoia? ( cdda )
 	converter? ( || ( gtk2 gtk3 ) )
@@ -119,6 +120,7 @@ RDEPEND="dev-libs/glib:2
 	mad? ( media-libs/libmad:0 )
 	midi? ( media-sound/timidity-freepats:0 )
 	mpg123? ( media-sound/mpg123:0 )
+	opus? ( media-libs/opusfile:0 )
 	psf? ( sys-libs/zlib:0 )
 	pulseaudio? ( media-sound/pulseaudio:0 )
 	sndfile? ( media-libs/libsndfile:0 )
@@ -201,6 +203,7 @@ src_configure() {
 		$(use_enable musepack) \
 		$(use_enable nls) \
 		$(use_enable nullout) \
+		$(use_enable opus) \
 		$(use_enable oss) \
 		$(use_enable playlist-browser pltbrowser) \
 		$(use_enable psf) \
