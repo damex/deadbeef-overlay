@@ -1,7 +1,7 @@
 language: python
 env:
     - repoman_version="2.3.12"
-install: "pip install lxml"
+install: "pip install lxml pyyaml"
 before_script:
     - mkdir travis-overlay
     - find -maxdepth 1 ! -name travis-overlay -exec mv {} travis-overlay \;
