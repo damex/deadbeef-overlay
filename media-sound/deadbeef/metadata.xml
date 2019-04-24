@@ -38,6 +38,7 @@
 		<flag name='mpg123'>MPEG-1/2/2.5 Layer 3 (MP3) support through mpg123/libmpg123</flag>
 		<flag name='nls'>Native Language Support (NLS)</flag>
 		<flag name='nullout'>NULL output plugin</flag>
+		<flag name='opus'>Ogg Opus plugin</flag>
 		<flag name='oss'>Open Sound System (OSS) output plugin</flag>
 		<flag name='playlist-browser'>Playlist browser user interface plugin</flag>
 		<flag name='psf'>AOSDK-based PSF(QSF,SSF,DSF) plugin</flag>
