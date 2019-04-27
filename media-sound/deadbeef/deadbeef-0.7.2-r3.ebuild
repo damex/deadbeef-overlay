@@ -8,7 +8,7 @@ PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja k
 
 PLOCALE_BACKUP="en_GB"
 
-inherit autotools gnome2-utils l10n versionator xdg-utils
+inherit autotools gnome2-utils l10n xdg-utils
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
