@@ -20,4 +20,4 @@ before_script:
     - ln -s /usr/portage/profiles/default/linux/amd64/17.0 /etc/portage/make.profile
     - cd travis-overlay
 script:
-    - python ../portage-repoman-${repoman_version}/repoman/bin/repoman full -d
+    - python ../portage-repoman-${repoman_version}/repoman/bin/repoman full --include-dev --without-mask --xmlparse --unmatched-removal
