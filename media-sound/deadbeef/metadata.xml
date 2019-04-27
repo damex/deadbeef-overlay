@@ -43,6 +43,7 @@
 		<flag name='playlist-browser'>Playlist browser user interface plugin</flag>
 		<flag name='psf'>AOSDK-based PSF(QSF,SSF,DSF) plugin</flag>
 		<flag name='pulseaudio'>PulseAudio output plugin</flag>
+		<flag name='replaygain-scanner'>ReplayGain scanner plugin</flag>
 		<flag name='sc68'>Atari ST and Amiga music plugin</flag>
 		<flag name='shell-exec'>Support for running shell commands</flag>
 		<flag name='shn'>Shorten (SHN) plugin</flag>
