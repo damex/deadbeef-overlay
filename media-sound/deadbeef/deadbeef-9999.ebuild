@@ -245,7 +245,7 @@ pkg_postinst() {
 	xdg_mimeinfo_database_update
 
 	if use gtk2 || use gtk3 ; then
-		gnome2_icon_cache_update
+		xdg_icon_cache_update
 	fi
 }
 
@@ -254,6 +254,6 @@ pkg_postrm() {
 	xdg_mimeinfo_database_update
 
 	if use gtk2 || use gtk3 ; then
-		gnome2_icon_cache_update
+		xdg_icon_cache_update
 	fi
 }
