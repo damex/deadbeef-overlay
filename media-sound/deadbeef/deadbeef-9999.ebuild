@@ -10,7 +10,7 @@ PLOCALE_BACKUP="en_GB"
 
 inherit autotools eutils git-r3 gnome2-utils l10n xdg-utils
 
-EGIT_REPO_URI="https://github.com/Alexey-Yakovenko/${PN}.git"
+EGIT_REPO_URI="https://github.com/DeadBeeF-Player/${PN}.git"
 EGIT_BRANCH="master"
 
 KEYWORDS=""
@@ -148,11 +148,6 @@ src_prepare() {
 	}
 
         l10n_for_each_disabled_locale_do remove_locale
-
-	if ! use_if_iuse linguas_ru ; then
-		eapply "${FILESDIR}/${P}-remove-ru-help-translation.patch"
-		rm -v "${S}/translation/help.ru.txt" || die
-	fi
 
 	if use midi ; then
 		# set default gentoo path
