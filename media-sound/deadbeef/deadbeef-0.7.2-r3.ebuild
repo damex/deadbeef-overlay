@@ -4,7 +4,7 @@
 EAPI="7"
 
 PLOCALES="be bg bn ca cs da de el en_GB es et eu fa fi fr gl he hr hu id it ja kk km lg
-	lt nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
+	lt lv nl pl pt pt_BR ro ru si_LK sk sl sr sr@latin sv te tr ug uk vi zh_CN zh_TW"
 
 PLOCALE_BACKUP="en_GB"
 
@@ -136,20 +136,27 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P}"
 
 src_prepare() {
-	if ! use_if_iuse linguas_pt_BR && use_if_iuse linguas_ru ; then
+	if [[ $(l10n_get_locales disabled) =~ "pt_BR" ]] && [[ $(l10n_get_locales) =~ "ru" ]] ; then
 		eapply "${FILESDIR}/${PN}-0.7.2-remove-pt_br-help-translation.patch"
 		rm -v "${S}/translation/help.pt_BR.txt" || die
 	fi
 
-	if ! use_if_iuse linguas_ru && use_if_iuse linguas_pt_BR ; then
+	if [[ $(l10n_get_locales disabled) =~ "ru" ]] && [[ $(l10n_get_locales) =~ "pt_BR" ]] ; then
 		eapply "${FILESDIR}/${PN}-0.7.2-remove-ru-help-translation.patch"
 		rm -v "${S}/translation/help.ru.txt" || die
 	fi
 
-	if ! use_if_iuse linguas_pt_BR && ! use_if_iuse linguas_ru ; then
+	if [[ $(l10n_get_locales disabled) =~ "pt_BR" ]] && [[ $(l10n_get_locales disabled) =~ "ru" ]] ; then
 		eapply "${FILESDIR}/${PN}-0.7.2-remove-pt_br-and-ru-help-translation.patch"
 		rm -v "${S}/translation/help.pt_BR.txt" "${S}/translation/help.ru.txt" || die
 	fi
+
+	remove_locale() {
+		sed -e "/${1}/d" \
+			-i "${S}/po/LINGUAS" || die
+	}
+
+	l10n_for_each_disabled_locale_do remove_locale
 
 	if use midi ; then
 		# set default gentoo path
