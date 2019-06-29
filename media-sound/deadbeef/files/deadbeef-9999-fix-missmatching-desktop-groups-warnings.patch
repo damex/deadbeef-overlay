@@ -1,0 +1,21 @@
+From 2e21989e0dbfc35baf36252804871c21d59ff548 Mon Sep 17 00:00:00 2001
+From: stefson <herrnielson2@yandex.com>
+Date: Sat, 29 Jun 2019 16:51:25 +0200
+Subject: [PATCH] improve unity removal
+
+---
+ deadbeef.desktop.in | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/deadbeef.desktop.in b/deadbeef.desktop.in
+index 1530dec14..c43b22aac 100644
+--- a/deadbeef.desktop.in
++++ b/deadbeef.desktop.in
+@@ -14,7 +14,6 @@ Comment[zh_TW]=聆聽音樂
+ Icon=deadbeef
+ Exec=deadbeef %F
+ Terminal=false
+-Actions=Play;Pause;Stop;Next;Prev;
+ MimeType=application/ogg;audio/x-vorbis+ogg;application/x-ogg;audio/mp3;audio/prs.sid;audio/x-flac;audio/mpeg;audio/x-mpeg;audio/x-mod;audio/x-it;audio/x-s3m;audio/x-xm;audio/x-mpegurl;audio/x-scpls;application/x-cue;
+ Categories=Audio;AudioVideo;Player;GTK;
+ Keywords=Sound;Music;Audio;Player;Musicplayer;MP3;
