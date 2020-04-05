@@ -142,6 +142,8 @@ src_prepare() {
 		eapply "${FILESDIR}/${P}-remove-ru-help-translation.patch"
 		rm -v "${S}/translation/help.ru.txt" || die
 	fi
+	
+	eapply "${FILESDIR}/${P}-fix-gettext.patch"
 
 	remove_locale() {
 		sed -e "/${1}/d" \
